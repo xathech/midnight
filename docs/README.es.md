@@ -68,7 +68,7 @@ Esta documentación también esta disponible en estos idiomas:
 
 5. Crea una base de datos llamada midnight.
 
-    >Tienes que estableces la codificación de caráteres a **utf8_unicode_ci**
+    >Tienes que establecer la codificación de caráteres a **utf8mb4_unicode_ci**
     
 6. Ejecuta estos comandos:
 
