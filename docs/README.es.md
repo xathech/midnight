@@ -45,7 +45,15 @@ Esta documentación también esta disponible en estos idiomas:
     ```
     >Espera hasta que el proyecto descargue todo lo que necesita.
 
-3. Busca y sustituye los valores del archivo env por estos:
+3. Copia el archivo .env.example y pégalo con el nombre .env :
+
+    ```
+    copy .env.example .env
+    ```
+
+    >También puedes hacerlo de forma manual
+
+4. Busca y sustituye los valores del archivo env por estos:
 
     APP_NAME=Midnight
 
@@ -54,14 +62,6 @@ Esta documentación también esta disponible en estos idiomas:
     DB_USERNAME=**TU USUARIO DE PHPMYADMIN** (por defecto es root)
 
     DB_PASSWORD=**TU CONTRASEÑA DE PHPMYADMIN** (por defecto el campo está vacío)
-
-4. Copia el archivo .env.example y pégalo con el nombre .env :
-
-    ```
-    copy .env.example .env
-    ```
-
-    >También puedes hacerlo de forma manual
 
 5. Crea una base de datos llamada midnight.
     
