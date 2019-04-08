@@ -18,18 +18,21 @@ Esta documentación también esta disponible en estos idiomas:
 
 ## Requisitos
 
-- Gestor de dependencias Composer:
-  - [Windows](https://getcomposer.org/doc/00-intro.md#installation-windows)
-  - [Linux / Unix / macOS](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-macos)
-
 - Servidor PHP XAMPP:
+
   - [Windows](https://www.apachefriends.org/download.html#download-windows)
   - [Linux](https://www.apachefriends.org/download.html#download-linux)
   - [macOS](https://www.apachefriends.org/download.html#download-apple)
 
+- Gestor de dependencias Composer:
+
+  - [Windows](https://getcomposer.org/doc/00-intro.md#installation-windows)
+  - [Linux / Unix / macOS](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-macos)
+
 ### Requisitos opcionales:
 
 - Controlador de versiones GIT:
+
   - [Windows](https://git-scm.com/download/win)
   - [Linux](https://git-scm.com/download/linux)
   - [macOS](https://git-scm.com/download/mac)
