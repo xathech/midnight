@@ -36,7 +36,8 @@ Esta documentación también esta disponible en estos idiomas:
 
 ## Instalación
 
-1. Descarga el zip del proyecto o [clónalo](https://git-scm.com/book/es/v1/Fundamentos-de-Git-Obteniendo-un-repositorio-Git#Clonando-un-repositorio-existente) (NECESITAS GIT)
+1. Descarga el zip del proyecto o [clónalo](https://git-scm.com/book/es/v1/Fundamentos-de-Git-Obteniendo-un-repositorio-Git#Clonando-un-repositorio-existente) 
+    >Para clonarlo necesitas GIT
 2. Abre una consola de comandos [sobre la carpeta](https://www.interadictos.es/2014/07/07/abrir-carpeta-desde-cmd/) del proyecto y ejecuta:
 
     ```
@@ -44,15 +45,7 @@ Esta documentación también esta disponible en estos idiomas:
     ```
     >Espera hasta que el proyecto descargue todo lo que necesita.
 
-3. Copia el archivo .env.example y pégalo con el nombre .env :
-
-    ```
-    copy .env.example .env
-    ```
-
-4. Crea una base de datos llamada midnight.
-
-5. Busca y sustituye los valores del archivo env por estos:
+3. Busca y sustituye los valores del archivo env por estos:
 
     APP_NAME=Midnight
 
@@ -61,6 +54,16 @@ Esta documentación también esta disponible en estos idiomas:
     DB_USERNAME=**TU USUARIO DE PHPMYADMIN** (por defecto es root)
 
     DB_PASSWORD=**TU CONTRASEÑA DE PHPMYADMIN** (por defecto el campo está vacío)
+
+4. Copia el archivo .env.example y pégalo con el nombre .env :
+
+    ```
+    copy .env.example .env
+    ```
+
+    >También puedes hacerlo de forma manual
+
+5. Crea una base de datos llamada midnight.
     
 6. Ejecutar estos comandos:
 
