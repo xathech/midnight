@@ -26,29 +26,10 @@ Route::group([
         return view('welcome');
     });
 
-    Auth::routes();
-    
-});
-
-/*
-
-Route::group(['prefix' => LaravelLocalization::setLocale()], function()
-{
-    
-	Route::get('/', function () {
-        return view('welcome');
-    });
+    Route::get('/home', 'HomeController@index')->name('home');
 
     Auth::routes();
     
 });
-
-*/
 
 /** OTHER PAGES THAT SHOULD NOT BE LOCALIZED **/
-
-
-
-
-
-Route::get('/home', 'HomeController@index')->name('home');
