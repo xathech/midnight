@@ -54,7 +54,7 @@ Esta documentación también esta disponible en estos idiomas:
     copy .env.example .env
     ```
 
-    >También puedes hacerlo de forma manual.
+    >Recuerda estar situado sobre la carpeta del proyecto
 
 4. Busca y sustituye los valores del archivo env por estos:
 
