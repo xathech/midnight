@@ -64,8 +64,10 @@ Esta documentación también esta disponible en estos idiomas:
     DB_PASSWORD=**TU CONTRASEÑA DE PHPMYADMIN** (por defecto el campo está vacío)
 
 5. Crea una base de datos llamada midnight.
+
+    >Tienes que estableces la codificación de caráteres a **utf8_unicode_ci**
     
-6. Ejecutar estos comandos:
+6. Ejecuta estos comandos:
 
     ```
     php artisan key:generate
@@ -77,6 +79,8 @@ Esta documentación también esta disponible en estos idiomas:
     ```
     php artisan serve
     ```
+
+    >Al terminar deja la consola abierta, pero si la has cerrado por accidente vuelve a escribir **php artisan serve**
 7. Abre el navegador y escribe en la URL:
 
     http://localhost:8000
