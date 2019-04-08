@@ -37,7 +37,7 @@ Esta documentación también esta disponible en estos idiomas:
 ## Instalación
 
 1. Descarga el zip del proyecto o [clónalo](https://git-scm.com/book/es/v1/Fundamentos-de-Git-Obteniendo-un-repositorio-Git#Clonando-un-repositorio-existente) 
-    >Para clonarlo necesitas GIT
+    >Para clonarlo necesitas GIT.
 2. Abre una consola de comandos [sobre la carpeta](https://www.interadictos.es/2014/07/07/abrir-carpeta-desde-cmd/) del proyecto y ejecuta:
 
     ```
@@ -51,7 +51,7 @@ Esta documentación también esta disponible en estos idiomas:
     copy .env.example .env
     ```
 
-    >También puedes hacerlo de forma manual
+    >También puedes hacerlo de forma manual.
 
 4. Busca y sustituye los valores del archivo env por estos:
 
@@ -75,7 +75,6 @@ Esta documentación también esta disponible en estos idiomas:
     ```
     php artisan migrate
     ```
-
     ```
     php artisan serve
     ```
