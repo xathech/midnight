@@ -11,6 +11,11 @@ Esta documentación también está disponible en estos idiomas:
 ## Tabla de contenidos
 
 - [Características principales](#características-principales)
+- [Requisitos](#requisitos)
+  - [Requisitos opcionales](#requisitos-opcionales)
+- [Instalación](#instalación)
+- [Licencia](#licencia)
+
 
 ## Características principales 
 
