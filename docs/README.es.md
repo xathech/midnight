@@ -69,7 +69,7 @@ Esta documentación también está disponible en estos idiomas:
 
     DB_PASSWORD=**TU CONTRASEÑA DE PHPMYADMIN** (por defecto el campo está vacío)
 
-5. Crea una base de datos llamada midnight.
+5. Crea una base de datos llamada **midnight**.
 
     >Tienes que establecer la codificación de caráteres a **utf8mb4_unicode_ci**
     
