@@ -28,13 +28,11 @@ Esta documentación también está disponible en estos idiomas:
 ## Requisitos
 
 - Servidor PHP XAMPP:
-
   - [Windows](https://www.apachefriends.org/download.html#download-windows)
   - [Linux](https://www.apachefriends.org/download.html#download-linux)
   - [macOS](https://www.apachefriends.org/download.html#download-apple)
 
 - Gestor de dependencias Composer:
-
   - [Windows](https://getcomposer.org/doc/00-intro.md#installation-windows)
   - [Linux / Unix / macOS](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-macos)
 
