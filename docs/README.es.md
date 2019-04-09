@@ -4,7 +4,7 @@ Midnight es una aplicación web basada en el framework Laravel, destinada a prop
 
 ## Idiomas
 
-Esta documentación también esta disponible en estos idiomas:
+Esta documentación también está disponible en estos idiomas:
 
 - [Inglés](../README.md)
 
@@ -12,8 +12,8 @@ Esta documentación también esta disponible en estos idiomas:
 
 - Creación y gestión de reseñas.
 - Creación y gestión de usuarios.
-- Buscador de reseñas con paginación y filtros opcionales.
-- Sistema de comentarios.
+- Sistema de roles de usuario.
+- Comentarios.
 - Paginas multidioma.
 
 ## Requisitos
@@ -46,7 +46,7 @@ Esta documentación también esta disponible en estos idiomas:
     ```
     composer install
     ```
-    >Espera hasta que el proyecto descargue todo lo que necesita.
+    >Mientras el proyecto descarga todo lo que necesita, sigue con el siguiente paso.
 
 3. Copia el archivo .env.example y pégalo con el nombre .env :
 
@@ -54,7 +54,7 @@ Esta documentación también esta disponible en estos idiomas:
     copy .env.example .env
     ```
 
-    >Recuerda estar situado sobre la carpeta del proyecto
+    >Recuerda hacerlo en la consola y estar situado sobre la carpeta del proyecto.
 
 4. Busca y sustituye los valores del archivo env por estos:
 
