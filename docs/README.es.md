@@ -89,7 +89,7 @@ Esta documentación también está disponible en estos idiomas:
     php artisan serve
     ```
 
-    >Al terminar deja la consola abierta, pero si la has cerrado por accidente vuelve a escribir **php artisan serve**
+    >Al terminar deja la consola abierta, pero si la has cerrado por accidente abre una nueva y escribe **php artisan serve**
 7. Abre el navegador y escribe en la URL:
 
     http://localhost:8000
