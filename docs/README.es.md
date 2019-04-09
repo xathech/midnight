@@ -65,10 +65,6 @@ Esta documentación también está disponible en estos idiomas:
 
 4. Busca y sustituye los valores del archivo .env por estos:
 
-    APP_NAME=Midnight
-
-    DB_DATABASE=midnight
-
     DB_USERNAME=**TU USUARIO DE PHPMYADMIN** (por defecto es root)
 
     DB_PASSWORD=**TU CONTRASEÑA DE PHPMYADMIN** (por defecto el campo está vacío)
