@@ -8,6 +8,10 @@ Esta documentación también está disponible en estos idiomas:
 
 - [Inglés](../README.md)
 
+## Tabla de contenidos
+
+- [Características principales](#características-principales)
+
 ## Características principales 
 
 - Creación y gestión de reseñas.
