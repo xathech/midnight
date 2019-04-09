@@ -65,9 +65,9 @@ Esta documentación también está disponible en estos idiomas:
 
 4. Busca y sustituye los valores del archivo .env por estos:
 
-    DB_USERNAME=**TU USUARIO DE PHPMYADMIN** (por defecto es root)
+    DB_USERNAME=**USUARIO DE PHPMYADMIN** (por defecto es root)
 
-    DB_PASSWORD=**TU CONTRASEÑA DE PHPMYADMIN** (por defecto el campo está vacío)
+    DB_PASSWORD=**CONTRASEÑA DE PHPMYADMIN** (por defecto está vacío)
 
 5. Crea una base de datos llamada **midnight**.
 
