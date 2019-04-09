@@ -1,6 +1,6 @@
 # Sobre Midnight
 
-Midnight es una aplicación web basada en el framework Laravel, destinada a proporcionar un servicio de gestión de reseñas y usuarios.
+Midnight es una aplicación web construida sobre el framework Laravel, destinada a proporcionar un servicio de gestión de reseñas y usuarios.
 
 ## Idiomas
 
