@@ -63,7 +63,7 @@ Esta documentación también está disponible en estos idiomas:
 
     >Recuerda hacerlo en la consola y estar situado sobre la carpeta del proyecto.
 
-4. Busca y sustituye los valores del archivo env por estos:
+4. Busca y sustituye los valores del archivo .env por estos:
 
     APP_NAME=Midnight
 
