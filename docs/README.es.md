@@ -1,31 +1,38 @@
 # Sobre Midnight
 
-Midnight es una aplicación web basada en el framework Laravel, destinada a proporcionar un servicio de gestión de reseñas y usuarios.
+Midnight es una aplicación web construida sobre el framework Laravel, destinada a proporcionar un servicio de gestión de reseñas y usuarios.
 
 ## Idiomas
 
-Esta documentación también esta disponible en estos idiomas:
+Esta documentación también está disponible en estos idiomas:
 
 - [Inglés](../README.md)
+
+## Tabla de contenidos
+
+- [Características principales](#características-principales)
+- [Requisitos](#requisitos)
+  - [Requisitos opcionales](#requisitos-opcionales)
+- [Instalación](#instalación)
+- [Licencia](#licencia)
+
 
 ## Características principales 
 
 - Creación y gestión de reseñas.
 - Creación y gestión de usuarios.
-- Buscador de reseñas con paginación y filtros opcionales.
-- Sistema de comentarios.
+- Sistema de roles de usuario.
+- Comentarios.
 - Paginas multidioma.
 
 ## Requisitos
 
 - Servidor PHP XAMPP:
-
   - [Windows](https://www.apachefriends.org/download.html#download-windows)
   - [Linux](https://www.apachefriends.org/download.html#download-linux)
   - [macOS](https://www.apachefriends.org/download.html#download-apple)
 
 - Gestor de dependencias Composer:
-
   - [Windows](https://getcomposer.org/doc/00-intro.md#installation-windows)
   - [Linux / Unix / macOS](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-macos)
 
@@ -46,7 +53,7 @@ Esta documentación también esta disponible en estos idiomas:
     ```
     composer install
     ```
-    >Espera hasta que el proyecto descargue todo lo que necesita.
+    >Mientras el proyecto descarga todo lo que necesita, sigue con el siguiente paso.
 
 3. Copia el archivo .env.example y pégalo con el nombre .env :
 
@@ -54,19 +61,15 @@ Esta documentación también esta disponible en estos idiomas:
     copy .env.example .env
     ```
 
-    >Recuerda estar situado sobre la carpeta del proyecto
+    >Recuerda hacerlo en la consola y estar situado sobre la carpeta del proyecto.
 
-4. Busca y sustituye los valores del archivo env por estos:
+4. Busca y sustituye los valores del archivo .env por estos:
 
-    APP_NAME=Midnight
+    DB_USERNAME=**USUARIO DE PHPMYADMIN** (por defecto es root)
 
-    DB_DATABASE=midnight
+    DB_PASSWORD=**CONTRASEÑA DE PHPMYADMIN** (por defecto está vacío)
 
-    DB_USERNAME=**TU USUARIO DE PHPMYADMIN** (por defecto es root)
-
-    DB_PASSWORD=**TU CONTRASEÑA DE PHPMYADMIN** (por defecto el campo está vacío)
-
-5. Crea una base de datos llamada midnight.
+5. En XAMPP crea una base de datos llamada **midnight**.
 
     >Tienes que establecer la codificación de caráteres a **utf8mb4_unicode_ci**
     
@@ -82,7 +85,7 @@ Esta documentación también esta disponible en estos idiomas:
     php artisan serve
     ```
 
-    >Al terminar deja la consola abierta, pero si la has cerrado por accidente vuelve a escribir **php artisan serve**
+    >Al terminar deja la consola abierta, pero si la has cerrado por accidente abre una nueva y escribe **php artisan serve**
 7. Abre el navegador y escribe en la URL:
 
     http://localhost:8000

@@ -10,6 +10,6 @@ This documentation is also available in these languages:
 
 
 
-## Licencia
+## License
 
 Midnight is a project under the [MIT License](https://opensource.org/licenses/MIT).
