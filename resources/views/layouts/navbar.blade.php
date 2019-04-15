@@ -1,9 +1,9 @@
 <!--NAVBAR-->
 <nav class="navbar navbar-expand-sm navbar-dark">
     <a class="navbar-brand" href="{{ url('/') }}">
-        {{ config('app.name', 'Midnight') }}<!--Nombre página-->
+        {{ config('app.name', 'Midnight') }}<!--Page name-->
     </a>
-    <!--Botón desplegable-->
+    <!--Drop-down button-->
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navcont" aria-controls="nabvarToggler" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -18,10 +18,14 @@
             </li>
         </ul>
 
-        <!-- Right Side Of Navbar -->            
+        <!-- Right Side Of Navbar -->
+        
+        <!--Language selector-->
 
-        <!--Buscar-->
-        <form class="form" action=""><!--RELLENAR ACTION-->
+        
+
+        <!--Search-->
+        <form class="form" action=""><!--FILL ACTION-->
             <div class="input-group">
                 <input class="form-control" type="search" aria-label="Search" placeholder="Buscar">
                 <div class="input-group-append">
