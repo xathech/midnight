@@ -5,6 +5,15 @@ body{
 nav{
     background-color: #35006A;
 }
+/*
+.dropdown-menu{
+    background-color:#35006A;
+}
+*/
+
+.card{
+    background-color: #35006A;
+}
 
 #divformu{
     background-color:#35006A;

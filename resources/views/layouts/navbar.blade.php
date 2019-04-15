@@ -20,14 +20,10 @@
 
         <!-- Right Side Of Navbar -->
         
-        <!--Language selector-->
-
-        
-
         <!--Search-->
         <form class="form" action=""><!--FILL ACTION-->
             <div class="input-group">
-                <input class="form-control" type="search" aria-label="Search" placeholder="Buscar">
+                <input class="form-control" type="search" aria-label="Search" placeholder="{{ __('Search') }}">
                 <div class="input-group-append">
                     <button class="btn btn-secondary mr-sm-3" type="submit">
                         <span class="fa fa-search pb-1" aria-hidden="true"></span>
@@ -35,6 +31,24 @@
                 </div>
             </div>
         </form>
+
+        <!--Language selector-->
+
+        <div id="langselector" class="dropdown mr-3">
+            <button class="btn btn-warning dropdown" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                {{ __('Language') }}
+                <i class="fa fa-globe fa-lg"></i>
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+                    <li>
+                        <a class="dropdown-item" rel="alternate" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
+                            {{ $properties['native'] }}
+                        </a>
+                    </li>
+                @endforeach
+            </div>
+        </div>
 
         <!-- Authentication Links -->
         @guest
