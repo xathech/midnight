@@ -26,7 +26,7 @@ Route::group([
         return view('home');
     });
 
-
+    Route::permanentRedirect('/home', '/');// Redirect test (not tested yet)
 
     //Route::get('/home', 'HomeController@index')->name('home'); Save for user profile(/profile)
 
