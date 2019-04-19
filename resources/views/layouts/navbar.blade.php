@@ -52,7 +52,7 @@
 
         <!-- Authentication Links -->
         @guest
-            <button class="btn btn-outline-warning my-2 my-sm-0" data-toggle="collapse" href="#divformu" type="button">
+            <button id="divformutog" class="btn btn-outline-warning my-2 my-sm-0" data-toggle="collapse" href="#divformu" type="button">
                 {{ __('Login') }}
             </button>
         @else
