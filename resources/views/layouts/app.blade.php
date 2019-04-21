@@ -24,7 +24,7 @@
 
     <!--Contenido-->
     <main class="p-4 h-100 mh-100 text-light">
-            @yield('content')
+        @yield('content')
     </main>
 
     @include('layouts.footer')

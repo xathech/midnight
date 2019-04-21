@@ -34,7 +34,7 @@
 
         <!--Language selector-->
 
-        <div id="langselector" class="dropdown mr-3">
+        <div id="langselector" class="dropdown mr-3 mt-2 mt-sm-0">
             <button class="btn btn-warning dropdown" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 {{ __('Language') }}
                 <i class="fa fa-globe fa-lg"></i>

@@ -5,28 +5,41 @@ body{
 nav{
     background-color: #35006A;
 }
-/*
-.dropdown-menu{
-    background-color:#35006A;
-}
-*/
 
 .card{
     background-color: #35006A;
 }
 
 #divformu{
+    z-index: 1;
     background-color:#35006A;
     position: absolute;
     right: 0;
     border-radius: 0 0 0 .25rem;
 }
-/*
-main{
-    background-color:#200040;
-    
-}
-*/
+
 footer{
     background-color:#35006A;
+}
+
+@media (min-width: 576px) {/*When page width is NOT on small device*/
+
+    footer{
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 576px){/*When page width is on small device*/
+
+    #social > a,#rights > a{
+        font-size: 1.3em;
+    }
+
+    #social > div,#rights > div{
+        font-size: 70%;
+    }
+
 }
