@@ -5,11 +5,6 @@ body{
 nav{
     background-color: #35006A;
 }
-/*
-.dropdown-menu{
-    background-color:#35006A;
-}
-*/
 
 .card{
     background-color: #35006A;
@@ -21,13 +16,61 @@ nav{
     position: absolute;
     right: 0;
     border-radius: 0 0 0 .25rem;
+    -webkit-box-shadow: -2px 2px 2px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: -2px 2px 2px 0px rgba(0,0,0,0.75);
+    box-shadow: -2px 2px 2px 0px rgba(0,0,0,0.75);
 }
+
+.dropdown-divider{
+    border-color: wheat;
+}
+
+.card{
+    background-color:rgb(41, 34, 90);
+}
+
+#day-review-img,#week-review-img{
+    padding: .3em;
+    border-radius: .5em;
+}
+
+#recent-reviews > h3{
+    width: 100%;
+    background-color:rgb(41, 34, 90);
+}
+
+#recent-reviews > div{
+    overflow-x: auto;
+    white-space: nowrap;
+    scrollbar-color: #ffc107;
+}
+/*
+#recent-reviews > div::-webkit-scrollbar {
+    background-color: rgb(41, 34, 90);
+}
+
+#recent-reviews > div::-webkit-scrollbar-thumb:horizontal  {
+    background-color: #ffc107;
+}
+*/
+
+#recent-reviews > div > .card{
+    padding-bottom: 0.5em;
+    display: inline-block;
+    float: none;
+    border-radius: 0px 0px;
+    -moz-border-radius: 0px 0px;
+    -webkit-border-radius: 0px 0px;
+}
+/*LA CLASE TEXT-TRUNCATE SERÁ DE AYUDA CUANDO EL TEXTO DE LAS REVIEWS PASE DE UNA LONGITUD ESPECIFICA*/
+
 
 footer{
     background-color:#35006A;
 }
 
-@media (min-width: 576px) {/*When page width is NOT on small device*/
+/*Por alguna razón esto ya no hace falta
+@media (min-width: 576px) {When page width is NOT on small device
 
     footer{
         position: absolute;
@@ -36,8 +79,14 @@ footer{
     }
 
 }
+*/
 
-@media (max-width: 576px){/*When page width is on small device*/
+/*When page width is on small device*/
+@media (max-width: 576px){
+
+    #week-review{
+        margin-top: 1em;
+    }
 
     #social > a,#rights > a{
         font-size: 1.3em;

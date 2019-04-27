@@ -11,10 +11,10 @@
     <div id="navcont" class="collapse navbar-collapse">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link" href="#">Ejemplo<span class="sr-only"(current)></span></a>
+                <a class="nav-link" href="#">{{ __('Reviews') }}<span class="sr-only"(current)></span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Ejemplo2<span class="sr-only"(current)></span></a>
+                <a class="nav-link" href="#">{{ __('Users') }}<span class="sr-only"(current)></span></a>
             </li>
         </ul>
 
