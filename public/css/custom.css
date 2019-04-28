@@ -5,7 +5,7 @@ body{
 nav{
     background-color: #35006A;
 }
-
+/*LA CLASE TEXT-TRUNCATE SERÁ DE AYUDA CUANDO EL TEXTO DE LAS REVIEWS PASE DE UNA LONGITUD ESPECIFICA*/
 .card{
     background-color: #35006A;
 }
@@ -37,6 +37,7 @@ nav{
 #recent-reviews > h3{
     width: 100%;
     background-color:rgb(41, 34, 90);
+    border-radius: .25rem .25rem 0 0;
 }
 
 #recent-reviews > div{
@@ -62,7 +63,6 @@ nav{
     -moz-border-radius: 0px 0px;
     -webkit-border-radius: 0px 0px;
 }
-/*LA CLASE TEXT-TRUNCATE SERÁ DE AYUDA CUANDO EL TEXTO DE LAS REVIEWS PASE DE UNA LONGITUD ESPECIFICA*/
 
 
 footer{

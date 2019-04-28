@@ -1,5 +1,5 @@
 <!--NAVBAR-->
-<nav class="navbar navbar-expand-sm navbar-dark">
+<nav class="navbar navbar-expand-md navbar-dark">
     <a class="navbar-brand" href="{{ url('/') }}">
         {{ config('app.name', 'Midnight') }}<!--Page name-->
     </a>
@@ -16,25 +16,30 @@
             <li class="nav-item">
                 <a class="nav-link" href="#">{{ __('Users') }}<span class="sr-only"(current)></span></a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">{{ __('About ') }}{{ config('app.name', 'Midnight') }}<span class="sr-only"(current)></span></a>
+            </li>
         </ul>
 
         <!-- Right Side Of Navbar -->
         
         <!--Search-->
-        <form class="form" action=""><!--FILL ACTION-->
-            <div class="input-group">
-                <input class="form-control" type="search" aria-label="Search" placeholder="{{ __('Search') }}">
-                <div class="input-group-append">
-                    <button class="btn btn-secondary mr-sm-3" type="submit">
-                        <span class="fa fa-search pb-1" aria-hidden="true"></span>
-                    </button>
+        <form class="form row ml-0 mr-auto" action=""><!--FILL ACTION-->
+            <div class="col-5 col-md-9 ml-md-4 px-0">
+                <div class="input-group">
+                    <input class="form-control" type="search" aria-label="Search" placeholder="{{ __('Search') }}">
+                    <div class="input-group-append">
+                        <button class="btn btn-secondary" type="submit">
+                            <span class="fa fa-search" aria-hidden="true"></span>
+                        </button>
+                    </div>
                 </div>
             </div>
         </form>
 
         <!--Language selector-->
 
-        <div id="langselector" class="dropdown mr-3 mt-2 mt-sm-0">
+        <div id="langselector" class="dropdown mr-3 mt-2 mt-md-0">
             <button class="btn btn-warning dropdown" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 {{ __('Language') }}
                 <i class="fa fa-globe fa-lg"></i>
@@ -52,7 +57,7 @@
 
         <!-- Authentication Links -->
         @guest
-            <button id="divformutog" class="btn btn-outline-warning my-2 my-sm-0" data-toggle="collapse" href="#divformu" type="button">
+            <button id="divformutog" class="btn btn-outline-warning my-2 my-md-0" data-toggle="collapse" href="#divformu" type="button">
                 {{ __('Login') }}
             </button>
         @else
