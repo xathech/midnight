@@ -4,10 +4,13 @@
         @csrf
 
         <div class="text-center">
+            <!--
             <div class="btn-group mb-3">
                 <button type="button" data-toggle="collapse" href="#divformu" class="btn btn-danger fa fa-arrow-up fa-2x"></button>
                 <button type="reset" class="btn btn-primary fa fa-trash fa-2x"></button>
             </div>
+            -->
+            <h5 class="text-light pb-2 font-weight-bold">{{__('Insert your data')}}</h5>
         </div>
         
         <div class="form-label-group">

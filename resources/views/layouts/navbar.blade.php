@@ -57,8 +57,8 @@
 
         <!-- Authentication Links -->
         @guest
-            <button id="divformutog" class="btn btn-outline-warning my-2 my-md-0" data-toggle="collapse" href="#divformu" type="button">
-                {{ __('Login') }}
+            <button id="divformutog" class="btn btn-outline-warning my-2 my-sm-0" data-toggle="collapse" href="#divformu" type="button">
+                <div>{{ __('Login') }}</div>
             </button>
         @else
             <li class="nav-item dropdown">
