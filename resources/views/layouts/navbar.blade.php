@@ -61,6 +61,10 @@
                 <div>{{ __('Login') }}</div>
             </button>
         @else
+            <button id="divformutog" class="btn btn-outline-warning my-2 my-sm-0" data-toggle="collapse" href="#divformu" type="button">
+                <div>{{ Auth::user()->name }}</div>
+            </button>
+        <!--
             <li class="nav-item dropdown">
                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                     {{ Auth::user()->name }} <span class="caret"></span>
@@ -78,6 +82,7 @@
                     </form>
                 </div>
             </li>
+        -->
         @endguest
     </div>
 </nav>

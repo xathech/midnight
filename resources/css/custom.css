@@ -21,6 +21,16 @@ nav{
     box-shadow: -2px 2px 2px 0px rgba(0,0,0,0.75);
 }
 
+#divformu-items > a{
+    color: white;
+    border-radius: 0.5em;
+}
+
+#divformu-items > a:hover{
+    background-color: #ffc107;
+    color: black;
+}
+
 .dropdown-divider{
     border-color: wheat;
 }
@@ -97,3 +107,14 @@ footer{
     }
 
 }
+/*
+@media (min-width: 576px) {When page width is NOT on small device
+
+    footer{
+        position:fixed;
+        bottom: 0;
+        width: 100%;
+    }
+
+}
+*/
