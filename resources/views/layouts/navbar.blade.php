@@ -39,16 +39,27 @@
 
         <!--Language selector-->
 
-        <div id="langselector" class="dropdown mr-3 mt-2 mt-md-0">
+        <div id="langselector" class="dropdown mr-3 my-2 my-md-0">
             <button class="btn btn-warning dropdown" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 {{ __('Language') }}
                 <i class="fa fa-globe fa-lg"></i>
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <h6 class="dropdown-header py-0 font-weight-bold text-center">{{__('Choose a Language')}}</h6>
+                <div class="dropdown-divider"></div>
                 @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
                     <li>
-                        <a class="dropdown-item" rel="alternate" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
-                        <img height="30" width="40" src="{{ asset('storage/images/flags/'.$properties['regional'].'.svg') }}" alt=""> {{ $properties['name'] }}
+                        @if (LaravelLocalization::getCurrentLocale() == $localeCode)
+
+                            <a class="dropdown-item active" rel="alternate" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
+                                
+                        @else
+
+                            <a class="dropdown-item" rel="alternate" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
+                            
+                        @endif
+
+                            <img height="30" width="40" src="{{ asset('storage/images/flags/'.$properties['regional'].'.svg') }}" alt=""> {{ $properties['native'] }}
                         </a>
                     </li>
                 @endforeach
@@ -57,11 +68,11 @@
 
         <!-- Authentication Links -->
         @guest
-            <button id="divformutog" class="btn btn-outline-warning my-2 my-sm-0" data-toggle="collapse" href="#divformu" type="button">
+            <button id="divformutog" class="btn btn-outline-warning mb-2 mb-sm-0" data-toggle="collapse" href="#divformu" type="button">
                 <div>{{ __('Login') }}</div>
             </button>
         @else
-            <button id="divformutog" class="btn btn-outline-warning my-2 my-sm-0" data-toggle="collapse" href="#divformu" type="button">
+            <button id="divformutog" class="btn btn-outline-warning mb-2 mb-sm-0" data-toggle="collapse" href="#divformu" type="button">
                 <div>{{ Auth::user()->name }}</div>
             </button>
         <!--

@@ -10,7 +10,7 @@
                 <button type="reset" class="btn btn-primary fa fa-trash fa-2x"></button>
             </div>
             -->
-            <h5 class="text-light pb-2 font-weight-bold">{{__('Insert your data')}}</h5>
+            <h5 class="text-light pb-2 font-weight-bold">{{__('Enter your data')}}</h5>
         </div>
         
         <div class="form-label-group">

@@ -10,6 +10,11 @@ nav{
     background-color: #35006A;
 }
 
+#langselector > .dropdown-menu > li > .dropdown-item.active{
+    background-color: #ffc107;
+    color: black;
+}
+
 #divformu{
     z-index: 1;
     background-color:#35006A;
