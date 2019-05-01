@@ -23,7 +23,7 @@
     @include('layouts.navbar')
 
     <!--Contenido-->
-    <main class="p-4 h-100 mh-100 text-light container-fluid">
+    <main class="p-4 text-light container-fluid">
         @yield('content')
     </main>
 
