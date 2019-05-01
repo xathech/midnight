@@ -79,6 +79,9 @@ nav{
     -webkit-border-radius: 0px 0px;
 }
 
+main{
+    min-height: calc(100vh - 160px);/*aleluya?(mantiene el footer debajo cuando el contenido de la pagina no es más grande que el viewport)*/
+}
 
 footer{
     background-color:#35006A;
@@ -101,10 +104,6 @@ footer{
 
     #week-review{
         margin-top: 1em;
-    }
-
-    #social > a,#rights > a{
-        font-size: 1.3em;
     }
 
     #social > div,#rights > div{
