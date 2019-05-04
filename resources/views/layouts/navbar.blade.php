@@ -1,8 +1,8 @@
 <!--NAVBAR-->
 <header>
     <nav class="navbar navbar-expand-md navbar-dark">
-        <a class="navbar-brand" href="{{ url('/') }}">
-            {{ config('app.name', 'Midnight') }}<!--Page name-->
+        <a class="navbar-brand p-0 mr-1" href="{{ url('/') }}">
+            <img src="{{ asset('storage/images/favicon.svg') }}" width="160" height="40" alt="">
         </a>
         <!--Drop-down button-->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navcont" aria-controls="nabvarToggler" aria-expanded="false" aria-label="Toggle navigation">
