@@ -18,8 +18,9 @@ class CreateReviewsTable extends Migration
             $table->unsignedBigInteger('user_id');            
             $table->string('title');
             $table->mediumText('body');
+            $table->bigInteger('votes')->default(0);
             $table->string('image');
-            $table->string('language', 2);
+            $table->string('language');
             $table->timestamps();
 
             //Foreign keys
