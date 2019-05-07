@@ -18,7 +18,7 @@ class CreateCommentsTable extends Migration
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('review_id');
             $table->string('body');
-            $table->string('language', 2);
+            $table->string('language');
             $table->timestamps();
 
             //Foreign keys

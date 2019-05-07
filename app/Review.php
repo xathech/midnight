@@ -7,13 +7,25 @@ use Carbon\Carbon;
 
 class Review extends Model
 {
+
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    protected $fillable = [
+        'title', 'body', 'image','language'
+    ];
+
     /**
      * Return the most voted review of the day.
      */
     public function mostVotedReview()
     {
       //return App\Review::all()->whereDate('created_at',date('Y-m-d H:i:s'))->sortByDesc('votes')->first();
-        return App\Review::all()->whereDate('created_at',Carbon())->sortByDesc('votes')->first();
+      //return App\Review::all()->whereDate('created_at',Carbon())->sortByDesc('votes')->first();
+      //return App\Review::all()->latest()->first();
+        return App\Review::latest()->first();
     }
 
     /**

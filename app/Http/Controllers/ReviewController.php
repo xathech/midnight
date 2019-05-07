@@ -7,6 +7,17 @@ use Illuminate\Http\Request;
 
 class ReviewController extends Controller
 {
+
+    /**
+     * Test.
+     * @return \App\Review
+     */
+    public function test1()
+    {
+        $review = new Review();
+        return $review->mostVotedReview();
+    }
+
     /**
      * Display a listing of the resource.
      *
