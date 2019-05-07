@@ -25,7 +25,7 @@ class Review extends Model
       //return App\Review::all()->whereDate('created_at',date('Y-m-d H:i:s'))->sortByDesc('votes')->first();
       //return App\Review::all()->whereDate('created_at',Carbon())->sortByDesc('votes')->first();
       //return App\Review::all()->latest()->first();
-        return App\Review::latest()->first();
+        return $this::latest()->first();
     }
 
     /**
