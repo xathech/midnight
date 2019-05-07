@@ -27,6 +27,7 @@ Route::group([
     })->name('home');
 
     Route::get('/test1', 'ReviewController@test1');
+    Route::get('/allreviews', 'ReviewController@index');
 
     //Route::permanentRedirect('/home', '/');// Redirect test
 
