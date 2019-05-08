@@ -25,12 +25,13 @@
             <!-- Right Side Of Navbar -->
             
             <!--Search-->
-            <form class="form row ml-0 mr-auto" action=""><!--FILL ACTION-->
+            <form class="form row ml-0 mr-auto" action="/search" method="GET" role="search">
+                {{ csrf_field() }}
                 <div class="col-5 col-md-9 ml-md-4 px-0">
                     <div class="input-group">
-                        <input class="form-control" type="search" aria-label="Search" placeholder="{{ __('Search') }}">
+                        <input name="searchinput" class="form-control" type="search" aria-label="Search" placeholder="{{ __('Search') }}">
                         <div class="input-group-append">
-                            <button class="btn btn-secondary" type="submit">
+                            <button type="submit" class="btn btn-secondary">
                                 <span class="fa fa-search" aria-hidden="true"></span>
                             </button>
                         </div>
