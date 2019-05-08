@@ -16,7 +16,8 @@ class CreateReviewsTable extends Migration
         Schema::create('reviews', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->unsignedBigInteger('user_id');            
-            $table->string('title');
+            $table->string('title',100);
+            $table->string('game_title',100);
             $table->mediumText('body');
             $table->bigInteger('votes')->default(0);
             $table->string('image');
