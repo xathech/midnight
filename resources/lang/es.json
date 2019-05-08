@@ -3,10 +3,10 @@
     "Password": "Contraseña",
     "Remember Me": "Recuérdame",
     "Login": "Iniciar Sesión",
-    "Forgot Your Password?": "¿Olvidaste tu contraseña?",
+    "Forgot Your Password?": "¿Has olvidado tu contraseña?",
     "You do not have an account?": "¿No tienes una cuenta?",
-    "Register": "Registro",
-    "Name": "Nombre",
+    "Register": "Registrarse",
+    "Username": "Usuario",
     "Confirm Password": "Confirmar contraseña",
     "Reset Password": "Restablecer contraseña",
     "Reset Password Notification": "Aviso para restablecer contraseña",
@@ -41,6 +41,6 @@
     "Users": "Usuarios",
     "About ":"Sobre ",
     "Enter your data":"Introduce tus datos",
-    "Profile":"Perfil",
+    "My Profile":"Mi Perfil",
     "Choose a Language":"Elije un Idioma"
 }
