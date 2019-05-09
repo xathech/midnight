@@ -18,6 +18,18 @@ class Review extends Model
     ];
 
     /**
+     * Return the review/reviews that match the paremeter
+     * 
+     * return $this
+     */
+
+    public function searchReview($search){
+
+        //return $this::where('title', $search)->orWhere('title', 'like', '%' . $search . '%')->get();
+        return $this::where('title', $search)->orWhere('title', 'like', '%' . $search . '%')->paginate(10);
+    }
+
+    /**
      * Return the most voted review of the day.
      */
     public function mostVotedReview()

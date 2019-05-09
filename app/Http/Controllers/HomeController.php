@@ -15,15 +15,46 @@ class HomeController extends Controller
      * Test.
      * @return \App\Review and \App\User
      */
-    public function search()
+    public function search(Request $request)
     {
-        $search = Input::get('searchinput');//parece que esto devuelve el valor del input(justo lo que quiero)
-
-        //$results = User::all();
-        $users = User::where('name', $search)->orWhere('name', 'like', '%' . $search . '%')->get();//move this to user model
-        //create another one for review and move the query to review model($users=user->searchUser() o algo así) 
+        $search = $request->get('searchinput');
         
-        return view('userslist', compact('users'));//adapt the view and controller for reviews names too
+        if (!isset($button)) {
+            $button = $request->get('searchbutton');
+        }
+        
+        //SI NADA FUNCIONA SEPARAR LAS BUSQUEDAS CON LOS ENLACES INDIVIDUALES DEL NAVBAR(mirar en las rutas para referencia)
+
+        $reviews = new Review();
+        $users = new User();
+
+        $reviews = $reviews->searchReview($search);
+        $users = $users->searchUser($search);
+
+        return view('search', compact('reviews','users','button'));
+
+        /*
+
+        switch ($request->get('searchbutton')) {
+
+            case 'reviews':
+                
+                $reviews = new Review();
+
+                $reviews = $reviews->searchReview($search);
+
+                return view('search', compact('reviews'));
+
+            case 'users':
+
+                $users = new User();
+
+                $users = $users->searchUser($search);
+
+                return view('search', compact('users'));    
+        }
+
+        */
     }
 
     /**

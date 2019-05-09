@@ -28,8 +28,13 @@ Route::group([
 
     Route::get('/test1', 'ReviewController@test1');
     Route::get('/allreviews', 'ReviewController@index');
-    Route::get('/search', 'HomeController@search' );
-
+    Route::get('/search', 'HomeController@search' )->name('search');
+/*
+    EN CASO DE QUE HAYA PREFERIDO ESTO
+    
+    Route::get('/reviews/search', 'HomeController@index' )->name('searchreviews');
+    Route::get('/users/search', 'HomeController@index' )->name('searchusers');
+*/
     //Route::permanentRedirect('/home', '/');// Redirect test
 
     //Route::get('/home', 'HomeController@index')->name('home'); Save for user profile(/profile)

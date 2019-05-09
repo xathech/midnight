@@ -38,6 +38,17 @@ class User extends Authenticatable
     ];
 
     /**
+     * Return the user/users that match the paremeter
+     * 
+     * return $this
+     */
+
+    public function searchUser($search){
+
+        return $this::where('name', $search)->orWhere('name', 'like', '%' . $search . '%')->paginate(10);
+    }
+
+    /**
      * Get the reviews for the user.
      */
     public function reviews()

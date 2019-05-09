@@ -1,6 +1,6 @@
 <!--NAVBAR-->
 <header>
-    <nav class="navbar navbar-expand-md navbar-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark">
         <a class="navbar-brand p-0 mr-1" href="{{ url('/') }}">
             <img src="{{ asset('storage/images/favicon.svg') }}" width="160" height="40" alt="">
         </a>
@@ -25,14 +25,17 @@
             <!-- Right Side Of Navbar -->
             
             <!--Search-->
-            <form class="form row ml-0 mr-auto" action="/search" method="GET" role="search">
-                {{ csrf_field() }}
-                <div class="col-5 col-md-9 ml-md-4 px-0">
+            <form class="form row ml-0 mr-auto" method="GET" action="{{ url('search') }}" role="search">
+                @csrf
+                <div class="col-sm-6 col-md-5 col-lg-10 px-0">
                     <div class="input-group">
                         <input name="searchinput" class="form-control" type="search" aria-label="Search" placeholder="{{ __('Search') }}">
                         <div class="input-group-append">
-                            <button type="submit" class="btn btn-secondary">
-                                <span class="fa fa-search" aria-hidden="true"></span>
+                            <button name="searchbutton" value="reviews" type="submit" class="btn btn-secondary">
+                                {{ __('Reviews') }}
+                            </button>
+                            <button name="searchbutton" value="users" type="submit" class="btn btn-secondary">
+                                {{ __('Users') }}
                             </button>
                         </div>
                     </div>
