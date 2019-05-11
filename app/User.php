@@ -38,6 +38,17 @@ class User extends Authenticatable
     ];
 
     /**
+     * Return all reviews
+     * 
+     * return $this
+     */
+
+    public function allUsers(){
+
+        return $this::paginate(20);
+    }
+
+    /**
      * Return the user/users that match the paremeter
      * 
      * return $this

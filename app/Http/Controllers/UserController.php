@@ -14,10 +14,11 @@ class UserController extends Controller
      */
     public function index()
     {
-        $users = User::paginate(15);
+        $users = new User();
+        $users = $users->allUsers();
 
         //return view('userslist', [ "users" => $users ]);
-        return view('userslist', compact('users'));
+        return view('layouts.userslist', compact('users'));
     }
 
     /**
@@ -27,7 +28,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        //
+        return "create user form(return view)";
     }
 
     /**

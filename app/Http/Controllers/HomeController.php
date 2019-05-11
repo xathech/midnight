@@ -17,22 +17,6 @@ class HomeController extends Controller
      */
     public function search(Request $request)
     {
-        $search = $request->get('searchinput');
-        
-        if (!isset($button)) {
-            $button = $request->get('searchbutton');
-        }
-        
-        //SI NADA FUNCIONA SEPARAR LAS BUSQUEDAS CON LOS ENLACES INDIVIDUALES DEL NAVBAR(mirar en las rutas para referencia)
-
-        $reviews = new Review();
-        $users = new User();
-
-        $reviews = $reviews->searchReview($search);
-        $users = $users->searchUser($search);
-
-        return view('search', compact('reviews','users','button'));
-
         /*
 
         switch ($request->get('searchbutton')) {
@@ -55,6 +39,23 @@ class HomeController extends Controller
         }
 
         */
+
+        $search = $request->get('searchinput');
+
+        //$type = $request->segment(3);
+
+        $users = new User();
+        $reviews = new Review();
+
+        $users = $users->searchUser($search);
+        $reviews = $reviews->searchReview($search);
+
+        //create another one for review and move the query to review model($users=user->searchUser() o algo así) 
+        
+        //return view('userslist', compact('users'));
+        //return view('reviewslist', compact('reviews'));
+        return view('search', compact('reviews','users'));
+        
     }
 
     /**

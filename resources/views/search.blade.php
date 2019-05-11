@@ -3,15 +3,7 @@
 @section('content')
     <div class="row container-fluid text-center">
 
-        @if ($button == 'reviews' )
-
-            @include('layouts.reviewslist')
-            
-        @else
-
-            @include('layouts.userslist')
-
-        @endif
+        @include('layouts.reviewslist')        
         
     </div>
 @endsection

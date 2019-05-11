@@ -41,7 +41,7 @@ nav{
 }
 
 .card{
-    background-color:rgb(41, 34, 90);
+    background-color:#29225A;
 }
 
 #day-review-img,#week-review-img{
@@ -51,7 +51,7 @@ nav{
 
 #recent-reviews > h3{
     width: 100%;
-    background-color:rgb(41, 34, 90);
+    background-color:#29225A;
     border-radius: .25rem .25rem 0 0;
 }
 
@@ -60,6 +60,32 @@ nav{
     white-space: nowrap;
     scrollbar-color: #ffc107;
 }
+
+.jumbotron{
+    background-color:#29225A;
+}
+
+#reviews-table,#users-table{
+    background-color:#29225A;
+}
+
+.page-link{
+    background-color:#29225A;
+    border-color: #454d55;
+    color: white;
+}
+
+.page-item.active .page-link,.page-link:focus,.page-link:hover{
+    border-color: #454d55;
+    background-color:#ffc107;
+    color: black;
+}
+
+.page-item.disabled .page-link{
+    border-color: #454d55;
+    background-color:#29225A;
+}
+
 /*
 #recent-reviews > div::-webkit-scrollbar {
     background-color: rgb(41, 34, 90);
@@ -108,6 +134,10 @@ footer{
 
     #social > div,#rights > div{
         font-size: 70%;
+    }
+
+    #paginator-container{
+        margin-top: 1em;
     }
 
 }

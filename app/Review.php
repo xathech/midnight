@@ -18,6 +18,17 @@ class Review extends Model
     ];
 
     /**
+     * Return all reviews
+     * 
+     * return $this
+     */
+
+    public function allReviews(){
+
+        return $this::paginate(10);
+    }
+
+    /**
      * Return the review/reviews that match the paremeter
      * 
      * return $this
@@ -26,7 +37,10 @@ class Review extends Model
     public function searchReview($search){
 
         //return $this::where('title', $search)->orWhere('title', 'like', '%' . $search . '%')->get();
-        return $this::where('title', $search)->orWhere('title', 'like', '%' . $search . '%')->paginate(10);
+        $reviews = $this::where('title', $search)->orWhere('title', 'like', '%' . $search . '%')->paginate(10);
+        //$reviews->withPath('search/review');
+
+        return $reviews;
     }
 
     /**

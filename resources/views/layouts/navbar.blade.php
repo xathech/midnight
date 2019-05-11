@@ -11,20 +11,21 @@
 
         <div id="navcont" class="collapse navbar-collapse">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">{{ __('Reviews') }}<span class="sr-only"(current)></span></a>
+                <li class="nav-item {{ request()->routeIs('searchReviews') ? 'active' : '' }}">
+                    <a class="nav-link" href="{{ route('searchReviews') }}">{{ __('Reviews') }}<span class="sr-only"></span></a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">{{ __('Users') }}<span class="sr-only"(current)></span></a>
+                <li class="nav-item {{ request()->routeIs('searchUsers') ? 'active' : '' }}">
+                    <a class="nav-link" href="{{ route('searchUsers') }}">{{ __('Users') }}<span class="sr-only"></span></a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">{{ __('About ') }}{{ config('app.name', 'Midnight') }}<span class="sr-only"(current)></span></a>
+                <li class="nav-item {{ request()->routeIs('about') ? 'active' : '' }}">
+                    <a class="nav-link" href="{{ route('about') }}">{{ __('About ') }}{{ config('app.name', 'Midnight') }}<span class="sr-only"></span></a>
                 </li>
             </ul>
 
             <!-- Right Side Of Navbar -->
             
             <!--Search-->
+            <!--
             <form class="form row ml-0 mr-auto" method="GET" action="{{ url('search') }}" role="search">
                 @csrf
                 <div class="col-sm-6 col-md-5 col-lg-10 px-0">
@@ -41,6 +42,7 @@
                     </div>
                 </div>
             </form>
+            -->
 
             <!--Language selector-->
 

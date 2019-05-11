@@ -25,10 +25,11 @@ class ReviewController extends Controller
      */
     public function index()
     {
-        $reviews = Review::paginate(15);
+        $reviews = new Review();
+        $reviews = $reviews->allReviews();
 
         //return view('reviewslist', [ "reviews" => $reviews ]);
-        return view('reviewslist', compact('reviews'));
+        return view('layouts.reviewslist', compact('reviews'));
     }
 
     /**
@@ -38,7 +39,7 @@ class ReviewController extends Controller
      */
     public function create()
     {
-        //
+        return "create review form(return view)";
     }
 
     /**

@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('title', __('Home'))
+
 @section('content')
     
     <div id="main-reviews" class="row mb-3 mx-3">
