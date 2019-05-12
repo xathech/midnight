@@ -23,10 +23,13 @@ class ReviewController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
+        $search = $request->input('query', '');
+        $check = $request->input('sort', '');
+
         $reviews = new Review();
-        $reviews = $reviews->allReviews();
+        $reviews = $reviews->searchReview($search,$check);
 
         //return view('reviewslist', [ "reviews" => $reviews ]);
         return view('layouts.reviewslist', compact('reviews'));

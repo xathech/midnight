@@ -12,10 +12,13 @@ class UserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
+        $search = $request->input('query', '');
+
         $users = new User();
-        $users = $users->allUsers();
+        $users = $users->searchUser($search);
+        //$users = $users->allUsers();
 
         //return view('userslist', [ "users" => $users ]);
         return view('layouts.userslist', compact('users'));

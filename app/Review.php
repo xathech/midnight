@@ -2,11 +2,30 @@
 
 namespace App;
 
+use Laravel\Scout\Searchable;
 use Illuminate\Database\Eloquent\Model;
-use Carbon\Carbon;
+//use Carbon\Carbon;
 
 class Review extends Model
 {
+
+    /**
+     * Make this model searchable by scout
+     */
+    use Searchable;
+
+    
+    /**
+     * Get the indexable data array for the model.
+     *
+     * @return array
+     */
+    public function toSearchableArray()
+    {
+        $array = $this->toArray();
+
+        return array('title'=> $array['title']);
+    }
 
     /**
      * The attributes that are mass assignable.
@@ -34,13 +53,27 @@ class Review extends Model
      * return $this
      */
 
-    public function searchReview($search){
+    public function searchReview($param, $sort){
+
+        //$reviews = $this::paginate(10);
 
         //return $this::where('title', $search)->orWhere('title', 'like', '%' . $search . '%')->get();
-        $reviews = $this::where('title', $search)->orWhere('title', 'like', '%' . $search . '%')->paginate(10);
+        //$reviews = $this::where('title', $search)->orWhere('title', 'like', '%' . $search . '%')->paginate(10);
         //$reviews->withPath('search/review');
 
-        return $reviews;
+        $query="id";
+
+        if ($sort=="votes") {
+
+            $query = "votes";
+        }
+
+        if ($sort=="lang") {
+
+            $query = "language";
+        }
+
+        return $this::search($param)->orderBy($query,'desc')->paginate(10)->appends(['sort' => $query]);
     }
 
     /**
