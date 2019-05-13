@@ -1,7 +1,7 @@
 <!--NAVBAR-->
 <header>
     <nav class="navbar navbar-expand-lg navbar-dark">
-        <a class="navbar-brand p-0 mr-1" href="{{ url('/') }}">
+        <a class="navbar-brand p-0 mr-1" href="{{ route('home') }}">
             <img src="{{ asset('storage/images/favicon.svg') }}" width="160" height="40" alt="">
         </a>
         <!--Drop-down button-->
@@ -111,6 +111,6 @@
 
 @else
 
-    @include('layouts.userdrop')
+    @include('users.userdrop')
     
 @endguest

@@ -21,7 +21,7 @@ class UserController extends Controller
         //$users = $users->allUsers();
 
         //return view('userslist', [ "users" => $users ]);
-        return view('layouts.userslist', compact('users'));
+        return view('users.userslist', compact('users'));
     }
 
     /**

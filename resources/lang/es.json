@@ -62,6 +62,13 @@
     "Date":"Fecha",
     "Sort":"Ordenar",
     "Search by title":"Buscar por título",
+    "Create":"Crear",
+    "Create Review":"Crear Reseña",
+    "Review Title":"Título de la reseña",
+    "Review Image":"Imagen de la reseña",
+    "Browse":"Buscar",
+    "Game title":"Título del juego",
+    "Review Body":"Cuerpo de la reseña",
     "Go back":"Volver",
     "Role":"Rol"
 }

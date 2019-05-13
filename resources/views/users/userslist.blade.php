@@ -28,7 +28,7 @@
         
         <div id="users-table-container" class="table-responsive table-sm container-fluid text-center">
 
-            @include('layouts.usersearch')
+            @include('users.usersearch')
         
             <table id="users-table" class="table table-dark table-hover table-bordered">
                 <thead class="p-3">

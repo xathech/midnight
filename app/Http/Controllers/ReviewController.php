@@ -32,7 +32,7 @@ class ReviewController extends Controller
         $reviews = $reviews->searchReview($search,$check);
 
         //return view('reviewslist', [ "reviews" => $reviews ]);
-        return view('layouts.reviewslist', compact('reviews'));
+        return view('reviews.reviewslist', compact('reviews'));
     }
 
     /**
@@ -42,7 +42,7 @@ class ReviewController extends Controller
      */
     public function create()
     {
-        return "create review form(return view)";
+        return view('reviews.create');
     }
 
     /**

@@ -29,3 +29,8 @@ $(document).click(function (event) {
         formtog.click();//clicks the button that opens/closes the form
     }
 });
+
+//Custom file imput
+$(document).ready(function () {
+    bsCustomFileInput.init()
+})

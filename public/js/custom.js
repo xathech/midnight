@@ -22,4 +22,8 @@ $(document).click(function (event) {
   if (_opened == true && !clickover.is("#divformu") && !clickover.parents().is("#divformu")) {
     formtog.click(); //clicks the button that opens/closes the form
   }
+}); //Custom file imput
+
+$(document).ready(function () {
+  bsCustomFileInput.init();
 });

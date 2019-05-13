@@ -31,7 +31,7 @@
 
         <div id="reviews-table-container" class="table-responsive table-sm container-fluid text-center">
 
-            @include('layouts.reviewsearch')
+            @include('reviews.reviewsearch')
 
             <table id="reviews-table" class="table table-dark table-hover table-bordered">
                 <thead>
