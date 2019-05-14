@@ -13,9 +13,9 @@ $factory->define(Review::class, function (Faker $faker) {
     $users_id = User::pluck('id');//retrieve all user id's as collections passed to array
 
     $images = array(
-        'storage/images/tests/1.jpg',
-        'storage/images/tests/2.jpg',
-        'storage/images/tests/3.jpg'
+        'images/tests/1.jpg',
+        'images/tests/2.jpg',
+        'images/tests/3.jpg'
     );
 
     $locales = LaravelLocalization::getSupportedLanguagesKeys();

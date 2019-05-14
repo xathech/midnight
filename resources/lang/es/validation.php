@@ -181,6 +181,8 @@ return [
         'time'                  => 'hora',
         'subject'               => 'asunto',
         'message'               => 'mensaje',
+        'game'                  => 'juego',
+        'image'                 => 'imagen',
     ],
 
 ];

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Review;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ReviewController extends Controller
 {
@@ -53,7 +54,26 @@ class ReviewController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validatedData = $request->validate([
+            'title' => 'required|max:255',
+            'image' => 'required|image|max:3072',
+            'game' => 'required',
+            'body' => 'required',
+        ]);
+
+        $review = new Review;
+
+        $review->user_id = Auth::user()->id;
+        $review->title = $request->input('title');
+        $review->image = $request->file('image')->store('/images/posts');
+        //$review->image = $request->file('image')->store('public/images/posts');
+        $review->game_title = $request->input('game');
+        $review->body = $request->input('body');
+        $review->language = app()->getLocale();
+
+        $review->save();
+
+
     }
 
     /**

@@ -49,7 +49,7 @@
                         <a href="">
                             <tr>
                                 
-                                <td class="align-middle"><img class="img-fluid" src="{{ asset($review->image) }}" alt="review-image"></td>
+                                <td class="align-middle"><img class="img-fluid" src="{{ asset('storage/'.$review->image) }}" alt="review-image"></td>
                                 <td class="align-middle">{{Str::limit($review->title,'60')}}</td>
                                 <td class="align-middle">{{Str::limit($review->game_title,'20')}}</td>
                                 <td class="align-middle">{{$review->votes}}</td>
