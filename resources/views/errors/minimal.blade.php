@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,14 +9,13 @@
         <!-- Fonts -->
         <link rel="dns-prefetch" href="//fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
+        <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
         <!-- Styles -->
         <style>
             html, body {
-                background-color: #fff;
-                color: #636b6f;
+                background-color: #200040;
                 font-family: 'Nunito', sans-serif;
-                font-weight: 100;
                 height: 100vh;
                 margin: 0;
             }
@@ -31,31 +30,21 @@
                 justify-content: center;
             }
 
-            .position-ref {
-                position: relative;
-            }
-
-            .code {
-                border-right: 2px solid;
-                font-size: 26px;
-                padding: 0 15px 0 15px;
-                text-align: center;
-            }
-
             .message {
-                font-size: 18px;
+                font-size: 28px;
                 text-align: center;
             }
         </style>
     </head>
-    <body>
+    <body class="text-light">
         <div class="flex-center position-ref full-height">
-            <div class="code">
+            <h1 class="border-right border-warning px-3 text-center display-1">
                 @yield('code')
-            </div>
+            </h1>
 
-            <div class="message" style="padding: 10px;">
-                @yield('message')
+            <div class="message p-3">
+                <div>@yield('message')</div>
+                <a class="btn btn-outline-warning mt-2" href="{{ route('home') }}">{{ __('Go back') }}</a>
             </div>
         </div>
     </body>
