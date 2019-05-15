@@ -15,7 +15,9 @@ $factory->define(Review::class, function (Faker $faker) {
     $images = array(
         'images/tests/1.jpg',
         'images/tests/2.jpg',
-        'images/tests/3.jpg'
+        'images/tests/4.jpg',
+        'images/tests/5.jpg',
+        'images/tests/6.jpg'
     );
 
     $locales = LaravelLocalization::getSupportedLanguagesKeys();
