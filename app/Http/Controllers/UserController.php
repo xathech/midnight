@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
@@ -53,7 +55,7 @@ class UserController extends Controller
      */
     public function show(User $user)
     {
-        //
+        
     }
 
     /**
@@ -62,9 +64,9 @@ class UserController extends Controller
      * @param  \App\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function edit(User $user)
+    public function edit()
     {
-        //
+        return view('users.userprofile')->with('currentUser', Auth::user());
     }
 
     /**
@@ -74,9 +76,23 @@ class UserController extends Controller
      * @param  \App\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, User $user)
+    public function update(Request $request)
     {
-        //
+        $validatedData = $request->validate([
+            'username' => 'required|max:191',
+            'email' => 'required|email|max:191',
+            'password' => 'required|max:191',
+        ]);
+
+        $user = Auth::user();
+
+        $user->name = $request->input('username');
+        $user->email = $request->input('email');
+        $user->password = Hash::make($request->input('password'));
+
+        $user->save();
+
+        return redirect()->route('home');
     }
 
     /**
@@ -85,8 +101,11 @@ class UserController extends Controller
      * @param  \App\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function destroy(User $user)
+    public function destroy()
     {
-        //
+        $user = new User();
+        $user = $user->deleteUser(Auth::user()->id);
+
+        return redirect()->route('home');
     }
 }

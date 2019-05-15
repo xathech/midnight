@@ -63,8 +63,8 @@ class User extends Authenticatable
      * return $this
      */
 
-    public function allUsers(){
-
+    public function allUsers()
+    {
         return $this::paginate(20);
     }
 
@@ -74,10 +74,15 @@ class User extends Authenticatable
      * return $this
      */
 
-    public function searchUser($param){
-
+    public function searchUser($param)
+    {
         //return $this::where('name', $search)->orWhere('name', 'like', '%' . $search . '%')->paginate(10);
         return $this::search($param)->paginate(10);
+    }
+
+    public function deleteUser($id)
+    {
+        return $this::destroy($id);
     }
 
     /**
@@ -95,5 +100,5 @@ class User extends Authenticatable
     {
         return $this->hasMany('App\Comment');
     }
-
+    
 }
