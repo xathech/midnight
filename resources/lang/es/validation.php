@@ -183,6 +183,8 @@ return [
         'message'               => 'mensaje',
         'game'                  => 'juego',
         'image'                 => 'imagen',
+        'new_password'          => 'nueva contraseña',
+        'new_password_confirmation'          => 'confirmar nueva contraseña'
     ],
 
 ];

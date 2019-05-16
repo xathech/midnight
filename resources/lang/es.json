@@ -74,5 +74,10 @@
     "Are you lost?":"¿Te has perdido?",
     "Enter the game title":"Escribe el título del juego",
     "Choose File":"Elije archivo",
-    "Enter the review title":"Escribe el título de la reseña"
+    "Enter the review title":"Escribe el título de la reseña",
+    "New password":"Nueva contraseña",
+    "Repeat new password":"Confirmar nueva contraseña",
+    "Write your new password":"Escribe tu nueva contraseña",
+    "Repeat your new password":"Repite tu nueva contraseña",
+    "Save changes":"Guardar cambios"
 }

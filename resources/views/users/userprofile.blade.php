@@ -14,16 +14,7 @@
 
                 <div style="background-color:#29225A;" class="p-4 text-light">
 
-                    <!--Errores aquí-->
-                    @if ($errors->any())
-                        <div class="alert alert-danger" role="alert">
-
-                            @foreach ($errors->all() as $message)
-                                <li>{{$message}}</li>
-                            @endforeach
-
-                        </div>
-                    @endif
+                    @include('errors.showerrors')
 
                     <form action="{{ route('updateUser') }}" method="post">
                         @csrf
@@ -39,12 +30,6 @@
                             <label for="emailid" class="col-sm-2 col-form-label">Email</label>
                             <div class="col-sm-10">
                                 <input type="email" class="form-control" id="emailid" name="email" placeholder="Email" value="{{$currentUser->email}}">
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="passwordid" class="col-sm-2 col-form-label">Password</label>
-                            <div class="col-sm-10">
-                                <input type="password" class="form-control" id="passwordid" name="password" placeholder="Password">
                             </div>
                         </div>
                         <div class="row px-3 justify-content-between">
