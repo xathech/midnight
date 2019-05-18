@@ -21,16 +21,20 @@ Route::group([
 ], function(){
 
     /** ADD ALL LOCALIZED ROUTES INSIDE THIS GROUP **/
-    
+/*
 	Route::get('/', function () {
         return view('home');
     })->name('home');
+*/
+    Route::get('/', 'ReviewController@home')->name('home');
 
     /**Route::get('/test1', 'ReviewController@test1');*/
     
     /**Reviews*/
     Route::get('/reviews/search', 'ReviewController@index')->name('searchReviews');
     Route::get('/reviews/create', 'ReviewController@create')->name('createReviews');
+    Route::post('/reviews/create', 'ReviewController@store')->name('storeReviews');
+    Route::get('/reviews/{review}', 'ReviewController@show')->name('viewReviews');
 
     /**Users*/
     Route::get('/users/search', 'UserController@index')->name('searchUsers');
@@ -38,6 +42,9 @@ Route::group([
     Route::get('/users/profile/password', 'UserController@editPassword')->name('userPassword');
     Route::get('/users/profile/reviews', 'UserController@reviews')->name('userReviews');
     Auth::routes();
+
+    /**Comments*/
+    Route::post('/reviews/{review}', 'CommentController@store')->name('storeComments');
 
     /**About*/
     Route::get('/about', 'HomeController@about')->name('about');

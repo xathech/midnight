@@ -19,11 +19,11 @@
                     <label class="custom-control-label" for="sortDefault">{{__('Default')}}</label>
                 </div>
                 <div class="custom-control custom-radio custom-control-inline">
-                    <input type="radio" id="sortVotes" name="sort" value="votes" class="custom-control-input">
-                    <label class="custom-control-label" for="sortVotes">{{__('Votes')}}</label>
+                    <input type="radio" id="sortRecent" name="sort" value="recent" class="custom-control-input">
+                    <label class="custom-control-label" for="sortRecent">{{__('Recent')}}</label>
                 </div>
                 <div class="custom-control custom-radio custom-control-inline">
-                    <input type="radio" id="sortLang" name="sort" value="lang" class="custom-control-input">
+                    <input type="radio" id="sortLang" name="sort" value="language" class="custom-control-input">
                     <label class="custom-control-label" for="sortLang">{{__('Language')}}</label>
                 </div>
             </div>

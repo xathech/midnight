@@ -19,7 +19,6 @@ class CreateReviewsTable extends Migration
             $table->string('title',100);
             $table->string('game_title',100);
             $table->mediumText('body');
-            $table->bigInteger('votes')->default(0);
             $table->string('image');
             $table->string('language');
             $table->timestamps();

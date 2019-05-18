@@ -56,7 +56,8 @@
     "Home":"Inicio",
     "Default":"Por defecto",
     "Image":"Imagen",
-    "Votes":"Votos",
+    "Comments":"Comentarios",
+    "Recent":"Reciente",
     "Title":"Título",
     "Game":"Juego",
     "Date":"Fecha",
@@ -64,6 +65,7 @@
     "Search by title":"Buscar por título",
     "Create":"Crear",
     "Create Review":"Crear Reseña",
+    "Create comment":"Crear comentario",
     "Review Title":"Título de la reseña",
     "Review Image":"Imagen de la reseña",
     "Browse":"Buscar",
@@ -79,5 +81,7 @@
     "Repeat new password":"Confirmar nueva contraseña",
     "Write your new password":"Escribe tu nueva contraseña",
     "Repeat your new password":"Repite tu nueva contraseña",
-    "Save changes":"Guardar cambios"
+    "Save changes":"Guardar cambios",
+    "Add comment":"Añadir comentario",
+    "comments":"comentarios"
 }

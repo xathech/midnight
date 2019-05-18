@@ -6,8 +6,13 @@ nav{
     background-color: #35006A;
 }
 /*LA CLASE TEXT-TRUNCATE SERÁ DE AYUDA CUANDO EL TEXTO DE LAS REVIEWS PASE DE UNA LONGITUD ESPECIFICA*/
-.card{
-    background-color: #35006A;
+
+#review-divider{
+    border: 1px solid #ffc107;
+}
+
+#review-user{
+    background-color: #ffc107;
 }
 
 textarea{
@@ -62,6 +67,7 @@ textarea{
 #recent-reviews > div{
     overflow-x: auto;
     white-space: nowrap;
+    text-overflow: ellipsis;
     scrollbar-color: #ffc107;
 }
 
@@ -132,10 +138,6 @@ footer{
 /*When page width is on small device*/
 @media (max-width: 576px){
 
-    #week-review{
-        margin-top: 1em;
-    }
-
     #social > div,#rights > div{
         font-size: 70%;
     }
@@ -145,6 +147,15 @@ footer{
     }
 
 }
+
+/*When page width is on medium device*/
+@media (max-width: 768px) {
+
+    #week-review{
+        margin-top: 1em;
+    }
+}
+
 /*
 @media (min-width: 576px) {When page width is NOT on small device
 

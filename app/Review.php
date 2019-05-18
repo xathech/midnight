@@ -4,7 +4,7 @@ namespace App;
 
 use Laravel\Scout\Searchable;
 use Illuminate\Database\Eloquent\Model;
-//use Carbon\Carbon;
+use Carbon\Carbon;
 
 class Review extends Model
 {
@@ -63,12 +63,12 @@ class Review extends Model
 
         $query="id";
 
-        if ($sort=="votes") {
+        if ($sort=="recent") {
 
-            $query = "votes";
+            $query = "created_at";
         }
 
-        if ($sort=="lang") {
+        if ($sort=="language") {
 
             $query = "language";
         }
@@ -77,14 +77,43 @@ class Review extends Model
     }
 
     /**
-     * Return the most voted review of the day.
+     * Return the most commented review.
      */
-    public function mostVotedReview()
+    public function mostCommentedEver()
     {
       //return App\Review::all()->whereDate('created_at',date('Y-m-d H:i:s'))->sortByDesc('votes')->first();
       //return App\Review::all()->whereDate('created_at',Carbon())->sortByDesc('votes')->first();
       //return App\Review::all()->latest()->first();
-        return $this::latest()->first();
+        //return $this::comments()->first();
+        return $this->withCount('comments')->orderby('comments_count','desc')->first();
+    }
+
+    /**
+     * Return the most voted review of the day.
+     */
+    public function mostCommentedWeek()
+    {
+      //return App\Review::all()->whereDate('created_at',date('Y-m-d H:i:s'))->sortByDesc('votes')->first();
+      //return App\Review::all()->whereDate('created_at',Carbon())->sortByDesc('votes')->first();
+      //return App\Review::all()->latest()->first();
+      //return $this::comments()->total()->first();
+/*
+        return $this::whereBetween('date', [
+            Carbon::parse('last sunday')->startOfDay(),
+            Carbon::parse('next saturday')->endOfDay(),
+        ])->comments->total();
+*/
+    }
+
+    /**
+     * Return the most recent reviews.
+     */
+    public function recentReviews()
+    {
+      //return App\Review::all()->whereDate('created_at',date('Y-m-d H:i:s'))->sortByDesc('votes')->first();
+      //return App\Review::all()->whereDate('created_at',Carbon())->sortByDesc('votes')->first();
+      //return App\Review::all()->latest()->first();
+        return $this::latest()->take(8)->get();
     }
 
     /**

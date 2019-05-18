@@ -10,13 +10,18 @@ class ReviewController extends Controller
 {
 
     /**
-     * Test.
-     * @return \App\Review
+     * Display the most commented, the most commented of the day, a random list of the 8 most recent reviews
+     * 
      */
-    public function test1()
-    {
-        $review = new Review();
-        return $review->mostVotedReview();
+    public function home(){
+
+        $review = new Review;
+
+        $mostCommentedEver = $review->mostCommentedEver();
+        $mostCommentedWeek = $review->mostCommentedWeek();
+        $recentList = $review->recentReviews();
+        
+        return view('home', compact('mostCommentedEver','mostCommentedWeek','recentList'));
     }
 
     /**
@@ -58,7 +63,7 @@ class ReviewController extends Controller
             'title' => 'required|max:255',
             'image' => 'required|image|max:3072',
             'game' => 'required',
-            'body' => 'required',
+            'body' => 'required|max:16,777,215',
         ]);
 
         $review = new Review;
@@ -73,7 +78,7 @@ class ReviewController extends Controller
 
         $review->save();
 
-        
+        return redirect()->route('home');
     }
 
     /**
@@ -84,7 +89,12 @@ class ReviewController extends Controller
      */
     public function show(Review $review)
     {
-        //
+        $comments = $review->comments()->paginate(10);
+        /*
+        $comments = new Comment();
+        $comments = $comments->commentsInReview($review);
+        */
+        return view('reviews.view', compact('review',"comments"));
     }
 
     /**

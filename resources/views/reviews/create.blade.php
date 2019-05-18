@@ -26,7 +26,7 @@
                         @endif
                         
 
-                        <form method="POST" action="{{ route('reviews.store') }}" enctype="multipart/form-data">
+                        <form method="POST" action="{{ route('storeReviews') }}" enctype="multipart/form-data">
                             @csrf
 
                             <div class="form-group">
@@ -61,15 +61,5 @@
             </div>
         </div>
     </div>
-    <script>
-        ClassicEditor
-            .create( document.querySelector( '#editor' ), {
-                language:'{{ app()->getLocale() }}',
-                removePlugins: [ 'image', 'media', 'table' ],
-                toolbar: [ 'heading', 'bold', 'italic', 'link', 'bulletedList', 'numberedList', 'blockQuote', 'undo', 'redo' ]
-
-            }).catch( error => {
-                console.error( error );
-            });
-    </script>
+    @include('layouts.ckeditor')
 @endsection
