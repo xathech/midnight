@@ -18,10 +18,10 @@ class ReviewController extends Controller
         $review = new Review;
 
         $mostCommentedEver = $review->mostCommentedEver();
-        $mostCommentedWeek = $review->mostCommentedWeek();
+        $randomReview = $review->randomReview();
         $recentList = $review->recentReviews();
         
-        return view('home', compact('mostCommentedEver','mostCommentedWeek','recentList'));
+        return view('home', compact('mostCommentedEver','randomReview','recentList'));
     }
 
     /**
@@ -60,10 +60,10 @@ class ReviewController extends Controller
     public function store(Request $request)
     {
         $validatedData = $request->validate([
-            'title' => 'required|max:255',
-            'image' => 'required|image|max:3072',
-            'game' => 'required',
-            'body' => 'required|max:16,777,215',
+            'title' => 'required|max:100',
+            'image' => 'required|image|size:3072',
+            'game' => 'required|max:100',
+            'body' => 'required|max:16777215',
         ]);
 
         $review = new Review;

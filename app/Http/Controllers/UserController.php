@@ -122,17 +122,22 @@ class UserController extends Controller
             'new_password_confirmation' => ['required','min:8','max:191'],
         ]);
 
-        return "cheese!";
-
-/*
         $user = Auth::user();
 
         $user->password = Hash::make($request->input('password'));
 
         $user->save();
 
-        return redirect()->route('home');
-*/
+        return redirect()->route('userPassword');
+    }
+
+    public function reviews(){
+
+        $reviews= Auth::user()->reviews;
+
+
+        return view('users.usereviews', compact('reviews'));
+
     }
 
     /**

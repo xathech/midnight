@@ -61,7 +61,10 @@ class Review extends Model
         //$reviews = $this::where('title', $search)->orWhere('title', 'like', '%' . $search . '%')->paginate(10);
         //$reviews->withPath('search/review');
 
-        $query="id";
+        if ($sort == '' || $sort == 'default') {
+
+            $query="title";
+        }
 
         if ($sort=="recent") {
 
@@ -91,18 +94,15 @@ class Review extends Model
     /**
      * Return the most voted review of the day.
      */
-    public function mostCommentedWeek()
+    public function randomReview()
     {
       //return App\Review::all()->whereDate('created_at',date('Y-m-d H:i:s'))->sortByDesc('votes')->first();
       //return App\Review::all()->whereDate('created_at',Carbon())->sortByDesc('votes')->first();
       //return App\Review::all()->latest()->first();
       //return $this::comments()->total()->first();
-/*
-        return $this::whereBetween('date', [
-            Carbon::parse('last sunday')->startOfDay(),
-            Carbon::parse('next saturday')->endOfDay(),
-        ])->comments->total();
-*/
+
+        return $this->inRandomOrder()->first();
+
     }
 
     /**

@@ -23,26 +23,6 @@
             </ul>
 
             <!-- Right Side Of Navbar -->
-            
-            <!--Search-->
-            <!--
-            <form class="form row ml-0 mr-auto" method="GET" action="{{ url('search') }}" role="search">
-                @csrf
-                <div class="col-sm-6 col-md-5 col-lg-10 px-0">
-                    <div class="input-group">
-                        <input name="searchinput" class="form-control" type="search" aria-label="Search" placeholder="{{ __('Search') }}">
-                        <div class="input-group-append">
-                            <button name="searchbutton" value="reviews" type="submit" class="btn btn-secondary">
-                                {{ __('Reviews') }}
-                            </button>
-                            <button name="searchbutton" value="users" type="submit" class="btn btn-secondary">
-                                {{ __('Users') }}
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </form>
-            -->
 
             <!--Language selector-->
 
@@ -80,7 +60,7 @@
                 </button>
             @else
                 <button id="divformutog" class="btn btn-outline-warning mb-2 mb-sm-0" data-toggle="collapse" href="#divformu" type="button">
-                    <div>{{ Auth::user()->name }}</div>
+                    <div><i class="fa fa-user" aria-hidden="true"></i> {{__('User')}}</div>
                 </button>
             <!--
                 <li class="nav-item dropdown">

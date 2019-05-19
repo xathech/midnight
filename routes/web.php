@@ -32,27 +32,27 @@ Route::group([
     
     /**Reviews*/
     Route::get('/reviews/search', 'ReviewController@index')->name('searchReviews');
-    Route::get('/reviews/create', 'ReviewController@create')->name('createReviews');
-    Route::post('/reviews/create', 'ReviewController@store')->name('storeReviews');
+    Route::get('/reviews/create', 'ReviewController@create')->name('createReviews')->middleware('auth');
+    Route::post('/reviews/create', 'ReviewController@store')->name('storeReviews')->middleware('auth');
     Route::get('/reviews/{review}', 'ReviewController@show')->name('viewReviews');
 
     /**Users*/
     Route::get('/users/search', 'UserController@index')->name('searchUsers');
-    Route::get('/users/profile', 'UserController@edit')->name('userProfile');
-    Route::get('/users/profile/password', 'UserController@editPassword')->name('userPassword');
-    Route::get('/users/profile/reviews', 'UserController@reviews')->name('userReviews');
+    Route::get('/users/profile', 'UserController@edit')->name('userProfile')->middleware('auth');
+    Route::get('/users/profile/password', 'UserController@editPassword')->name('userPassword')->middleware('auth');
+    Route::get('/users/profile/reviews', 'UserController@reviews')->name('userReviews')->middleware('auth');
     Auth::routes();
 
     /**Comments*/
-    Route::post('/reviews/{review}', 'CommentController@store')->name('storeComments');
+    Route::post('/reviews/{review}', 'CommentController@store')->name('storeComments')->middleware('auth');
 
     /**About*/
     Route::get('/about', 'HomeController@about')->name('about');
 
     /*Users posts*/
-    Route::put('users/update', 'UserController@update' )->name('updateUser');
-    Route::delete('/users/delete', 'UserController@destroy')->name('deleteUser');
-    Route::put('users/updatePassword', 'UserController@updatePassword' )->name('updatePassword');
+    Route::put('users/update', 'UserController@update' )->name('updateUser')->middleware('auth');
+    Route::delete('/users/delete', 'UserController@destroy')->name('deleteUser')->middleware('auth');
+    Route::put('users/updatePassword', 'UserController@updatePassword' )->name('updatePassword')->middleware('auth');
 
 });
 

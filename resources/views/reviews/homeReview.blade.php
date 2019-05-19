@@ -1,4 +1,7 @@
-<div class="card text-light">
+<div class="card text-light" id="home-review">
+    <h4 class="card-header">
+        <i class="{{ $icon }} text-warning mr-1" aria-hidden="true"></i> <span class="font-weight-bold">{{ $message }}</span>
+    </h4>
     <img id="day-review-img" src="{{ asset('storage/'.$review->image) }}" class="card-img-top" alt="day-review-image">
     <div class="card-body">
         <div class="card-title row">
@@ -9,7 +12,7 @@
             </div>
         </div>
         <div class="dropdown-divider"></div><!--Divider-->
-        <p class="card-text">{!!Str::limit($review->body,300)!!}</p>
+        <p class="card-text">{!!Str::limit($review->body,250)!!}</p>
         <a href="{{ route('viewReviews', $review) }}" class="btn btn-warning float-right">{{ __('See full review') }}</a>
     </div>
 </div>
