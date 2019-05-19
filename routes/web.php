@@ -35,6 +35,7 @@ Route::group([
     Route::get('/reviews/create', 'ReviewController@create')->name('createReviews')->middleware('auth');
     Route::post('/reviews/create', 'ReviewController@store')->name('storeReviews')->middleware('auth');
     Route::get('/reviews/{review}', 'ReviewController@show')->name('viewReviews');
+    Route::delete('/reviews/{review}/delete', 'ReviewController@destroy')->name('deleteReview')->middleware('auth');
 
     /**Users*/
     Route::get('/users/search', 'UserController@index')->name('searchUsers');

@@ -76,6 +76,11 @@ class Review extends Model
         return $this::search($param)->orderBy($query,'desc')->paginate(10)->appends(['sort' => $query]);
     }
 
+    public function deleteReview($id)
+    {
+        return $this::destroy($id);
+    }
+
     /**
      * Return the most commented review.
      */

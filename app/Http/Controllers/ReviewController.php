@@ -127,7 +127,9 @@ class ReviewController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function destroy(Review $review)
-    {
-        //
+    {        
+        $review->deleteReview($review->id);
+
+        return redirect()->route('home');
     }
 }
