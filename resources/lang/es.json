@@ -42,11 +42,16 @@
     "Repeat your password":"Repite tu contraseña",
     "Recent Reviews": "Reseñas recientes",
     "See full review":"Ver reseña completa",
+    "Delete account":"Borrar cuenta",
+    "Do you really want to delete your account?":"¿De verdad quieres borrar tu cuenta?",
+    "Cancel":"Cancelar",
+    "Yes, I want to delete my account":"Si, quiero borrar mi cuenta",
     "Reviews":"Reseñas",
     "Users": "Usuarios",
     "About ":"Sobre ",
     "Enter your data":"Introduce tus datos",
     "My Profile":"Mi Perfil",
+    "Profile":"Perfil",
     "Choose a Language":"Elije un Idioma",
     "User not found":"No se ha encontrado el usuario",
     "Do you want to create one?":"Quieres crear uno?",
@@ -85,5 +90,8 @@
     "Add comment":"Añadir comentario",
     "comments":"comentarios",
     "Most commented review":"Reseña más comentada",
-    "Random review":"Reseña aleatoria"
+    "Random review":"Reseña aleatoria",
+    "External Laravel modules used":"Módulos externos de Laravel utilizados",
+    "Documentation":"Documentación",
+    "Midnight it's a videogames reviews web page developed under the PHP framework Laravel and the CSS framework Bootstrap.":"Midnight es una página web de reseñas de videojuegos desarrollada bajo el framework PHP Laravel y el framework CSS Bootstrap."
 }

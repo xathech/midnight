@@ -14,7 +14,7 @@
 
             <div style="background-color:#29225A;" class="p-4 text-light">
 
-                <table id="reviews-table" class="table table-dark table-hover table-bordered text-center">
+                <table id="reviews-table" class="table-responsive table-sm table-dark table-hover table-bordered text-center">
                     <thead>
                         <th scope="col" style="width:10%">{{__('Image')}}</th>
                         <th scope="col">{{__('Title')}}</th>

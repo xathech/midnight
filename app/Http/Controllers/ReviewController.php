@@ -61,7 +61,7 @@ class ReviewController extends Controller
     {
         $validatedData = $request->validate([
             'title' => 'required|max:100',
-            'image' => 'required|image|size:3072',
+            'image' => 'required|image|max:3072',
             'game' => 'required|max:100',
             'body' => 'required|max:16777215',
         ]);

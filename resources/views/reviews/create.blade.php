@@ -43,7 +43,7 @@
                             </div>
 
                             <div class="form-group">
-                                <label for="input-game">{{ __('Game Title') }}</label>
+                                <label for="input-game">{{ __('Game title') }}</label>
                                 <input id="input-game" type="text" name="game" value="{{ old('game') }}" class="form-control" placeholder="{{ __('Enter the game title') }}">
                             </div>
 
