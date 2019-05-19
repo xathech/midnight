@@ -70,7 +70,9 @@
 
                                 <div class="list-group">
                                     <a href="https://github.com/Johann-S/bs-custom-file-input" class="list-group-item list-group-item-action list-group-item-dark stretched-link">bs-custom-file-input 1.3.2</a>
-                                    <a href="https://github.com/auxiliary/rpage" class="list-group-item list-group-item-action list-group-item-dark stretched-link">rpage</a>                
+                                    <a href="https://github.com/auxiliary/rpage" class="list-group-item list-group-item-action list-group-item-dark stretched-link">rpage</a>
+                                    <a href="https://ckeditor.com/ckeditor-4/" class="list-group-item list-group-item-action list-group-item-dark stretched-link">ckeditor 4</a>
+                                    <a href="https://ckeditor.com/cke4/addon/wordcount" class="list-group-item list-group-item-action list-group-item-dark stretched-link">ckeditor wordcount</a>
                                 </div>
 
                             </div>

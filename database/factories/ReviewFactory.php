@@ -26,7 +26,7 @@ $factory->define(Review::class, function (Faker $faker) {
         'user_id' => $faker->randomElement($users_id),
         'title' => $faker->realText($maxNbChars = 100),
         'game_title' => $faker->realText($maxNbChars = 70),
-        'body' => $faker->realText($maxNbChars = 600),
+        'body' => $faker->realText($maxNbChars = 800),
         'image' => $faker->randomElement($images),
         'language' => $faker->randomElement($locales),
     ];

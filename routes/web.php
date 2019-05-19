@@ -21,14 +21,8 @@ Route::group([
 ], function(){
 
     /** ADD ALL LOCALIZED ROUTES INSIDE THIS GROUP **/
-/*
-	Route::get('/', function () {
-        return view('home');
-    })->name('home');
-*/
-    Route::get('/', 'ReviewController@home')->name('home');
 
-    /**Route::get('/test1', 'ReviewController@test1');*/
+    Route::get('/', 'ReviewController@home')->name('home');
     
     /**Reviews*/
     Route::get('/reviews/search', 'ReviewController@index')->name('searchReviews');

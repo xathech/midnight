@@ -63,7 +63,7 @@ class ReviewController extends Controller
             'title' => 'required|max:100',
             'image' => 'required|image|max:3072',
             'game' => 'required|max:100',
-            'body' => 'required|max:16777215',
+            'body' => 'required|max:2000',
         ]);
 
         $review = new Review;

@@ -35,4 +35,12 @@ CKEDITOR.editorConfig = function( config ) {
 
 	// Simplify the dialog windows.
 	config.removeDialogTabs = 'image:advanced;link:advanced';
+
+	config.extraPlugins = 'wordcount';
+
+	config.wordcount = {
+		// Maximum allowed Char Count, -1 is default for unlimited
+		showCharCount: true,
+		maxCharCount: 2000,
+	}
 };
