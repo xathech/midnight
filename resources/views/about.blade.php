@@ -17,7 +17,7 @@
                     <div class="card">
                         <div class="card-header" id="headingOne">
                         <h5 class="mb-0">
-                            <button class="btn btn-link text-decoration-none text-warning stretched-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                            <button class="btn btn-link text-decoration-none text-warning collapsed stretched-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
                                 {{__('External Laravel modules used')}}
                             </button>
                         </h5>
@@ -40,7 +40,7 @@
                     <div class="card">
                         <div class="card-header" id="headingTwo">
                         <h5 class="mb-0">
-                            <button class="btn btn-link text-decoration-none text-warning collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            <button class="btn btn-link text-decoration-none text-warning collapsed stretched-link" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                                 {{__('Documentation')}}
                             </button>
                         </h5>
@@ -56,7 +56,45 @@
 
                             </div>
                         </div>
-                    </div>                    
+                    </div> 
+                    <div class="card">
+                        <div class="card-header" id="headingThree">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link text-decoration-none text-warning collapsed stretched-link" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                {{__('External Javascript code')}}
+                            </button>
+                        </h5>
+                        </div>
+                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                            <div class="card-body">
+
+                                <div class="list-group">
+                                    <a href="https://github.com/Johann-S/bs-custom-file-input" class="list-group-item list-group-item-action list-group-item-dark stretched-link">bs-custom-file-input 1.3.2</a>
+                                    <a href="https://github.com/auxiliary/rpage" class="list-group-item list-group-item-action list-group-item-dark stretched-link">rpage</a>                
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="headingFour">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link text-decoration-none text-warning collapsed stretched-link" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                {{__('External CSS code')}}
+                            </button>
+                        </h5>
+                        </div>
+                        <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+                            <div class="card-body">
+
+                                <div class="list-group">
+                                    <a href="https://getbootstrap.com/docs/4.3/examples/floating-labels/" class="list-group-item list-group-item-action list-group-item-dark stretched-link">floating-labels</a>
+                                    <a href="https://fontawesome.com/v4.7.0/" class="list-group-item list-group-item-action list-group-item-dark stretched-link">Fontawesome 4.7.0</a>                                    
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>                  
                 </div>
             </div>
         </div>

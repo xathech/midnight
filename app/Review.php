@@ -61,10 +61,7 @@ class Review extends Model
         //$reviews = $this::where('title', $search)->orWhere('title', 'like', '%' . $search . '%')->paginate(10);
         //$reviews->withPath('search/review');
 
-        if ($sort == '' || $sort == 'default') {
-
-            $query="title";
-        }
+        $query="title";
 
         if ($sort=="recent") {
 

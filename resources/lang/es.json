@@ -92,6 +92,8 @@
     "Most commented review":"Reseña más comentada",
     "Random review":"Reseña aleatoria",
     "External Laravel modules used":"Módulos externos de Laravel utilizados",
+    "External Javascript code":"Código externo Javascript",
+    "External CSS code":"Código externo CSS",
     "Documentation":"Documentación",
     "Midnight it's a videogames reviews web page developed under the PHP framework Laravel and the CSS framework Bootstrap.":"Midnight es una página web de reseñas de videojuegos desarrollada bajo el framework PHP Laravel y el framework CSS Bootstrap."
 }

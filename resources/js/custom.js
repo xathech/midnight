@@ -34,3 +34,8 @@ $(document).click(function (event) {
 $(document).ready(function () {
     bsCustomFileInput.init()
 })
+
+//Custom pagination
+$(document).ready(function () {
+    $(".pagination").rPage();
+});

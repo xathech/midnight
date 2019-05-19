@@ -133,7 +133,7 @@ class UserController extends Controller
 
     public function reviews(){
 
-        $reviews= Auth::user()->reviews;
+        $reviews= Auth::user()->reviews()->paginate(10);
 
 
         return view('users.usereviews', compact('reviews'));

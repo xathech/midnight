@@ -38,6 +38,9 @@
                         @endforeach
                     </tbody>
                 </table>
+                <div id="paginator-container" class="container-fluid col-sm-mt-3">
+                    {{ $reviews->links() }}
+                </div>
             </div>
         </div>
     </div>        

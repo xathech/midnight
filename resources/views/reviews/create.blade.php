@@ -49,7 +49,7 @@
 
                             <div class="form-group text-dark">
                                     <label class="text-light" for="review-body">{{ __('Review Body') }}</label>
-                                    <textarea name="body" id="editor"></textarea>
+                                    <textarea name="body" id="editor">{!! Request::old('body') !!}</textarea>
                             </div>
                             
                             <button type="submit" class="btn btn-warning">{{__('Create')}}</button>
