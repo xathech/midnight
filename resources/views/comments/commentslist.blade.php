@@ -1,6 +1,6 @@
 <div class="card mt-2 p-3">
     <h2 class="text-center m-0">{{__('Add comment')}}</h2>
-
+    
     <form method="POST" class="m-3" action="{{ route('storeComments', $review) }}" enctype="multipart/form-data">
         @csrf
 

@@ -1,5 +1,5 @@
 <!--Formulario-->
-<div id="divformu" class="collapse col-sm-12 col-md-5 col-lg-3 col-xl-2"><!--COLLAPSE ES LA PROPIEDAD QUE LO ANIMA-->
+<div id="divformu" class="collapse col-sm-12 col-md-12 col-lg-3 col-xl-2"><!--COLLAPSE ES LA PROPIEDAD QUE LO ANIMA-->
     <form method="POST" action="{{ route('login') }}" class="form-signin">
         @csrf
 

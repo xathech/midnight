@@ -32,7 +32,7 @@
 
                             @auth
                                 
-                                @if ($review->user_id == Auth::user()->id)
+                                @if ($review->user_id == Auth::user()->id || Auth::user()->role == 1)
                                     
                                     <div class="text-right">
                                         <button class="btn btn-outline-danger" type="button" data-toggle="modal" data-target="#modal">{{__('Delete review')}}</button>
@@ -62,7 +62,7 @@
                             @endauth
                                                         
                         </div>                        
-                </div>
+                </div>                
                 @include('comments.commentslist')                
             </div>
         </div>

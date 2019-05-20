@@ -1,5 +1,5 @@
 <!--User dropdown-->
-<div id="divformu" class="collapse col-sm-12 col-md-5 col-lg-3 col-xl-2 p-2">
+<div id="divformu" class="collapse col-sm-12 col-md-12 col-lg-3 col-xl-2 p-2">
     <div id="divformu-items" class="text-light text-center">
         <a href="{{ route('createReviews') }}" class="dropdown-item"><i class="fa fa-pencil-square-o"></i> {{__('Create Review')}}</a>
         <a href="{{ route('userProfile') }}" class="dropdown-item"><i class="fa fa-user-circle"></i> {{__('My Profile')}}</a>

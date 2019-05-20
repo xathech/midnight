@@ -43,6 +43,8 @@
             </h1>
 
             <div class="message p-3">
+                <div>@yield('title')</div>
+                <hr class="bg-warning">
                 <div>@yield('message')</div>
                 <a class="btn btn-outline-warning mt-2" href="{{ route('home') }}">{{ __('Go back') }}</a>
             </div>

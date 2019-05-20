@@ -36,7 +36,7 @@ Route::group([
     Route::get('/users/profile', 'UserController@edit')->name('userProfile')->middleware('auth');
     Route::get('/users/profile/password', 'UserController@editPassword')->name('userPassword')->middleware('auth');
     Route::get('/users/profile/reviews', 'UserController@reviews')->name('userReviews')->middleware('auth');
-    Auth::routes();
+    Auth::routes(['verify' => false,'reset' => false]);
 
     /**Comments*/
     Route::post('/reviews/{review}', 'CommentController@store')->name('storeComments')->middleware('auth');

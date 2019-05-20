@@ -26,7 +26,7 @@
 
             <!--Language selector-->
 
-            <div id="langselector" class="dropdown mr-3 my-2 my-md-0">
+            <div id="langselector" class="dropdown mr-3 my-1 my-lg-0">
                 <button class="btn btn-warning dropdown" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     {{ __('Language') }}
                     <i class="fa fa-globe fa-lg"></i>
@@ -55,32 +55,13 @@
 
             <!-- Authentication Links -->
             @guest
-                <button id="divformutog" class="btn btn-outline-warning mb-2 mb-sm-0" data-toggle="collapse" href="#divformu" type="button">
+                <button id="divformutog" class="btn btn-outline-warning mb-2 mb-sm-0 mt-2 mt-lg-0" data-toggle="collapse" href="#divformu" type="button">
                     <div>{{ __('Login') }}</div>
                 </button>
             @else
-                <button id="divformutog" class="btn btn-outline-warning mb-2 mb-sm-0" data-toggle="collapse" href="#divformu" type="button">
-                    <div><i class="fa fa-user" aria-hidden="true"></i> {{__('User')}}</div>
+                <button id="divformutog" class="btn btn-outline-warning mb-2 mb-sm-0 mt-2 mt-lg-0" data-toggle="collapse" href="#divformu" type="button">
+                    <div><i class="fa fa-user" aria-hidden="true"></i> {{ Str::limit(Auth::user()->name,30) }}</div>
                 </button>
-            <!--
-                <li class="nav-item dropdown">
-                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                        {{ Auth::user()->name }} <span class="caret"></span>
-                    </a>
-
-                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="{{ route('logout') }}"
-                            onclick="event.preventDefault();
-                                            document.getElementById('logout-form').submit();">
-                            {{ __('Logout') }}
-                        </a>
-
-                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                            @csrf
-                        </form>
-                    </div>
-                </li>
-            -->
             @endguest
         </div>
     </nav>

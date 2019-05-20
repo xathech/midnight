@@ -66,10 +66,6 @@
                                 <button type="submit" class="btn btn-warning">
                                     {{ __('Register') }}
                                 </button>
-
-                                <a class="btn btn-link text-warning" href="{{ route('register') }}">
-                                    {{ __('You already have an account?') }}
-                                </a>
                             </div>
                         </div>
                     </form>
