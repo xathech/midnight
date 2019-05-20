@@ -1,28 +1,38 @@
 <div class="card mt-2 p-3">
     <h2 class="text-center m-0">{{__('Add comment')}}</h2>
     
-    <form method="POST" class="m-3" action="{{ route('storeComments', $review) }}" enctype="multipart/form-data">
-        @csrf
+    @auth
+        
+        <form method="POST" class="m-3" action="{{ route('storeComments', $review) }}" enctype="multipart/form-data">
+            @csrf
 
-        <input type="hidden" name="review_id" value="{{$review->id}}">
+            <input type="hidden" name="review_id" value="{{$review->id}}">
 
-        <div class="form-group text-dark">
-            <textarea name="body" id="editor"></textarea>
-        </div>
-        <!--Errores aquí-->
-        @if ($errors->any())
-            <div class="alert alert-danger mt-3" role="alert">
-
-                @foreach ($errors->all() as $message)
-                    <li>{{$message}}</li>
-                @endforeach
-
+            <div class="form-group text-dark">
+                <textarea name="body" id="editor"></textarea>
             </div>
-        @endif
-        <div class="text-center">
-            <button type="submit" class="btn btn-warning align-items-center">{{__('Create comment')}}</button>
+            <!--Errores aquí-->
+            @if ($errors->any())
+                <div class="alert alert-danger mt-3" role="alert">
+
+                    @foreach ($errors->all() as $message)
+                        <li>{{$message}}</li>
+                    @endforeach
+
+                </div>
+            @endif
+            <div class="text-center">
+                <button type="submit" class="btn btn-warning align-items-center">{{__('Create comment')}}</button>
+            </div>
+        </form>
+
+    @else
+        <div class="text-center my-3">
+            <a class="btn btn-warning" href="{{ route('login') }}">
+                <div>{{ __('Login') }}</div>
+            </a>
         </div>
-    </form>
+    @endauth
 
     <h5>{{$comments->total()}} {{__('comments')}}</h5>
     @foreach ($comments as $comment)

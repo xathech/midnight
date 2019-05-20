@@ -67,5 +67,7 @@
             </div>
         </div>
     </div>
-    @include('layouts.ckeditor')
+    @auth
+        @include('layouts.ckeditor')
+    @endauth
 @endsection
