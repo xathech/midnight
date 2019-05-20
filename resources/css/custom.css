@@ -135,6 +135,20 @@ footer{
 }
 */
 
+::-webkit-scrollbar {
+    width: 1em;
+}
+ 
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px #29225A;
+    -webkit-box-shadow: inset 0 0 6px #29225A;
+}
+ 
+::-webkit-scrollbar-thumb {
+  background-color: #35006A;
+  outline: 1px solid #35006A;
+}
+
 /*When page width is on small device*/
 @media (max-width: 576px){
 

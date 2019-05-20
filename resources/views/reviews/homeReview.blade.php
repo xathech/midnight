@@ -5,8 +5,8 @@
     <img id="day-review-img" src="{{ asset('storage/'.$review->image) }}" class="card-img-top" alt="day-review-image">
     <div class="card-body">
         <div class="card-title row">
-            <div id="week-review-title" class="col-sm-10"><h4>{{ Str::limit($review->title,90) }}</h4></div>
-            <div id="week-review-info" class="col-sm text-sm-left text-md-right align-self-center">
+            <div id="week-review-title" class="col-12"><h4>{{ Str::limit($review->title,98) }}</h4></div>
+            <div id="week-review-info" class="col-12 text-right align-self-center">
                 <div id="week-review-date" class="font-weight-bold">{{$review->created_at->diffForHumans()}}</div>
                 <div id="week-review-author" class="text-warning">{{ $review->user->name }}</div>
             </div>
