@@ -25,7 +25,6 @@
                             </div>
                         @endif
                         
-
                         <form method="POST" action="{{ route('storeReviews') }}" enctype="multipart/form-data">
                             @csrf
 
@@ -51,9 +50,11 @@
                                     <label class="text-light" for="review-body">{{ __('Review Body') }}</label>
                                     <textarea name="body" id="editor">{!! Request::old('body') !!}</textarea>
                             </div>
+                            <div class="row justify-content-between mx-1">
+                                <button type="submit" class="btn btn-warning">{{__('Create')}}</button>
+                                <a class="btn btn-outline-danger" href="{{ route('home') }}">{{ __('Go back') }}</a>
+                            </div>
                             
-                            <button type="submit" class="btn btn-warning">{{__('Create')}}</button>
-                            <a class="btn btn-outline-danger ml-1" href="{{ route('home') }}">{{ __('Go back') }}</a>
 
                         </form>
                     </div>

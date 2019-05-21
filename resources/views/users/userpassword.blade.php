@@ -23,19 +23,19 @@
                         <div class="form-group row">
                             <label for="passwordid" class="col-sm-2 col-form-label">{{__('Password')}}</label>
                             <div class="col-sm-10">
-                                <input type="password" class="form-control" id="passwordid" name="password" placeholder="{{ __('Write your password') }}">
+                                <input type="password" class="form-control" id="passwordid" name="old_password" placeholder="{{ __('Write your password') }}">
                             </div>
                         </div>                        
                         <div class="form-group row">
                             <label for="passwordid" class="col-sm-2 col-form-label">{{__('New password')}}</label>
                             <div class="col-sm-10">
-                                <input type="password" class="form-control" id="new_passwordid" name="new_password" placeholder="{{ __('Write your new password') }}">
+                                <input type="password" class="form-control" id="new_passwordid" name="password" placeholder="{{ __('Write your new password') }}">
                             </div>
                         </div>
                         <div class="form-group row">
                             <label for="passwordid" class="col-sm-2 col-form-label">{{__('Repeat new password')}}</label>
                             <div class="col-sm-10">
-                                <input type="password" class="form-control" id="new_password_confirmationid" name="new_password_confirmation" placeholder="{{ __('Repeat your new password') }}">
+                                <input type="password" class="form-control" id="new_password_confirmationid" name="password_confirmation" placeholder="{{ __('Repeat your new password') }}">
                             </div>
                         </div>
                         <div class="row px-3 justify-content-center">
