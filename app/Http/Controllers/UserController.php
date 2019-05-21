@@ -117,9 +117,9 @@ class UserController extends Controller
     public function updatePassword(Request $request)
     {
         $validatedData = $request->validate([
-            'password' => ['required','min:8','different:new_password','max:191', new CheckPassword],
-            'new_password' => ['required','min:8','confirmed','max:191'],
-            'new_password_confirmation' => ['required','min:8','max:191'],
+            'old_password' => ['required','min:8','different:password','max:191', new CheckPassword],
+            'password' => ['required','min:8','confirmed','max:191'],
+            'password_confirmation' => ['required','min:8','max:191'],
         ]);
 
         $user = Auth::user();
@@ -128,7 +128,7 @@ class UserController extends Controller
 
         $user->save();
 
-        return redirect()->route('userPassword');
+        return redirect()->route('home');
     }
 
     public function reviews(){

@@ -145,9 +145,8 @@ return [
     */
 
     'attributes' => [
-        'new_password'          => 'new password',
-        'new_password_confirmation'          => 'repeat new password'
-
+        'old_password'          => 'old password',
+        'password_confirmation'          => 'repeat password'
     ],
 
 ];

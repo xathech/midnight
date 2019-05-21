@@ -183,8 +183,9 @@ return [
         'message'               => 'mensaje',
         'game'                  => 'juego',
         'image'                 => 'imagen',
-        'new_password'          => 'nueva contraseña',
-        'new_password_confirmation'          => 'confirmar nueva contraseña'
+        'old_password'          => 'contraseña',
+        'password'              => 'nueva contraseña',
+        'password_confirmation'          => 'confirmar contraseña'
     ],
 
 ];
