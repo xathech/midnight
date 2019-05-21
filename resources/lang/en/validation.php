@@ -147,7 +147,6 @@ return [
     'attributes' => [
         'old_password'          => 'old password',
         'password_confirmation'          => 'repeat password'
-
     ],
 
 ];
