@@ -1,0 +1,183 @@
+body{
+    background-color:#200040;/*Es posible que sea temporal*/
+}
+
+nav{
+    background-color: #35006A;
+}
+/*LA CLASE TEXT-TRUNCATE SERÁ DE AYUDA CUANDO EL TEXTO DE LAS REVIEWS PASE DE UNA LONGITUD ESPECIFICA*/
+
+#review-divider{
+    border: 1px solid #ffc107;
+}
+
+#review-user{
+    background-color: #ffc107;
+}
+
+textarea{
+    color: black;
+}
+
+#langselector > .dropdown-menu > li > .dropdown-item.active{
+    background-color: #ffc107;
+    color: black;
+}
+
+#divformu{
+    z-index: 3;
+    background-color:#35006A;
+    position: absolute;
+    right: 0;
+    border-radius: 0 0 0 .25rem;
+    -webkit-box-shadow: -2px 2px 2px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: -2px 2px 2px 0px rgba(0,0,0,0.75);
+    box-shadow: -2px 2px 2px 0px rgba(0,0,0,0.75);
+}
+
+#divformu-items > a{
+    color: white;
+    border-radius: 0.5em;
+}
+
+#divformu-items > a:hover{
+    background-color: #ffc107;
+    color: black;
+}
+
+.dropdown-divider{
+    border-color: wheat;
+}
+
+.card{
+    background-color:#29225A;
+}
+
+#day-review-img,#week-review-img{
+    padding: .3em;
+    border-radius: .5em;
+}
+
+#recent-reviews > h3{
+    width: 100%;
+    background-color:#29225A;
+    border-radius: .25rem .25rem 0 0;
+}
+
+#recent-reviews > div{
+    overflow-x: auto;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    scrollbar-color: #ffc107;
+}
+
+.jumbotron{
+    background-color:#29225A;
+}
+
+#reviews-table,#users-table{
+    background-color:#29225A;
+}
+
+.page-link{
+    background-color:#29225A;
+    border-color: #454d55;
+    color: white;
+}
+
+.page-item.active .page-link,.page-link:focus,.page-link:hover{
+    border-color: #454d55;
+    background-color:#ffc107;
+    color: black;
+}
+
+.page-item.disabled .page-link{
+    border-color: #454d55;
+    background-color:#29225A;
+}
+
+/*
+#recent-reviews > div::-webkit-scrollbar {
+    background-color: rgb(41, 34, 90);
+}
+
+#recent-reviews > div::-webkit-scrollbar-thumb:horizontal  {
+    background-color: #ffc107;
+}
+*/
+
+#recent-reviews > div > .card{
+    padding-bottom: 0.5em;
+    display: inline-block;
+    float: none;
+    border-radius: 0px 0px;
+    -moz-border-radius: 0px 0px;
+    -webkit-border-radius: 0px 0px;
+}
+
+main{
+    min-height: calc(100vh - 160px);/*aleluya?(mantiene el footer debajo cuando el contenido de la pagina no es más grande que el viewport)*/
+}
+
+footer{
+    background-color:#35006A;
+}
+
+/*Por alguna razón esto ya no hace falta
+@media (min-width: 576px) {When page width is NOT on small device
+
+    footer{
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+    }
+
+}
+*/
+
+::-webkit-scrollbar {
+    width: 1em;
+}
+ 
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px #29225A;
+    -webkit-box-shadow: inset 0 0 6px #29225A;
+}
+ 
+::-webkit-scrollbar-thumb {
+  background-color: #35006A;
+  outline: 1px solid #35006A;
+}
+
+/*When page width is on small device*/
+@media (max-width: 576px){
+
+    #social > div,#rights > div{
+        font-size: 70%;
+    }
+
+    #paginator-container{
+        margin-top: 1em;
+    }
+
+}
+
+/*When page width is on medium device*/
+@media (max-width: 768px) {
+
+    #week-review{
+        margin-top: 1em;
+    }
+}
+
+/*
+@media (min-width: 576px) {When page width is NOT on small device
+
+    footer{
+        position:fixed;
+        bottom: 0;
+        width: 100%;
+    }
+
+}
+*/

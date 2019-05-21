@@ -1,23 +1,28 @@
 @extends('layouts.app')
 
+@section('title', __('Home'))
+
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">Dashboard</div>
+    
+    <div id="main-reviews" class="row mb-3 mx-3">
+        <div id="day-review" class="col-md">
 
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
+            @include('reviews.homeReview',['review' => $mostCommentedEver, 'icon' => 'fa fa-star' ,'message' => __('Most commented review')])
 
-                    You are logged in!
-                </div>
-            </div>
         </div>
+
+        <div id="week-review" class="col-md">
+
+            @include('reviews.homeReview',['review' => $randomReview, 'icon' => 'fa fa-refresh' ,'message' => __('Random review')])
+
+        </div>
+
     </div>
-</div>
+
+    <div id="recent-reviews" class="row mt-4 mb-3 mx-3">
+
+        @include('reviews.recentDeck',['reviews' => $recentList])
+
+    </div>
+
 @endsection

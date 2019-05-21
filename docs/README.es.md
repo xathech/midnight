@@ -82,7 +82,10 @@ Esta documentación también está disponible en estos idiomas:
     php artisan storage:link
     ```
     ```
-    php artisan migrate
+    php artisan migrate:fresh --seed
+    ```
+    ```
+    php artisan scout:mysql-index
     ```
     ```
     php artisan serve

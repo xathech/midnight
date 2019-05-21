@@ -30,7 +30,7 @@ return [
         'array'   => 'El campo :attribute debe contener entre :min y :max elementos.',
     ],
     'boolean'              => 'El campo :attribute debe ser verdadero o falso.',
-    'confirmed'            => 'El campo confirmación de :attribute no coincide.',
+    'confirmed'            => 'El campo confirmar :attribute no coincide.',
     'date'                 => 'El campo :attribute no corresponde con una fecha válida.',
     'date_equals'          => 'El campo :attribute debe ser una fecha igual a :date.',
     'date_format'          => 'El campo :attribute no corresponde con el formato de fecha :format.',
@@ -125,11 +125,17 @@ return [
     | convention "attribute.rule" to name the lines. This makes it quick to
     | specify a specific custom language line for a given attribute rule.
     |
-    */
 
     'custom' => [
         'attribute-name' => [
             'rule-name' => 'custom-message',
+        ],
+    ],
+    */
+
+    'custom' => [
+        'email' => [
+            'unique' => 'Esta dirección de :attribute ya ha sido registrada.',
         ],
     ],
 
@@ -143,7 +149,42 @@ return [
     | of "email". This simply helps us make messages a little cleaner.
     |
     */
-
-    'attributes' => [],
+   
+    'attributes' => [
+        'name'                  => 'nombre',
+        'username'              => 'usuario',
+        'email'                 => 'correo electrónico',
+        'first_name'            => 'nombre',
+        'last_name'             => 'apellido',
+        'password'              => 'contraseña',
+        'password_confirmation' => 'confirmar contraseña',
+        'city'                  => 'ciudad',
+        'country'               => 'país',
+        'address'               => 'dirección',
+        'phone'                 => 'teléfono',
+        'mobile'                => 'móvil',
+        'age'                   => 'edad',
+        'sex'                   => 'sexo',
+        'gender'                => 'género',
+        'year'                  => 'año',
+        'month'                 => 'mes',
+        'day'                   => 'día',
+        'hour'                  => 'hora',
+        'minute'                => 'minuto',
+        'second'                => 'segundo',
+        'title'                 => 'título',
+        'content'               => 'contenido',
+        'body'                  => 'cuerpo',
+        'description'           => 'descripción',
+        'excerpt'               => 'extracto',
+        'date'                  => 'fecha',
+        'time'                  => 'hora',
+        'subject'               => 'asunto',
+        'message'               => 'mensaje',
+        'game'                  => 'juego',
+        'image'                 => 'imagen',
+        'new_password'          => 'nueva contraseña',
+        'new_password_confirmation'          => 'confirmar nueva contraseña'
+    ],
 
 ];
