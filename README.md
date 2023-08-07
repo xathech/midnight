@@ -1,3 +1,7 @@
+# Archived
+
+Dude to the code not being actively maintained, this project has been archived
+
 # About Midnight
 
 Midnight is a web application based on the Laravel framework, designed to provide a review and user management service.
