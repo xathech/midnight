@@ -1,3 +1,7 @@
+# Archivado
+
+Debido a que el código ya no está mantenido, se ha archivado este proyecto.
+
 # Sobre Midnight
 
 Midnight es una aplicación web construida sobre el framework Laravel, destinada a proporcionar un servicio de gestión de reseñas y usuarios.
